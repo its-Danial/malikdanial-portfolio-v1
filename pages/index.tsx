@@ -12,22 +12,36 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex-grow relative">
-        <div className="absolute z-10">
-          <h1 className="text-black text-9xl">Hello Im Danial</h1>
+      {/* full page container */}
+      <div className="flex-grow ">
+        {/* way and content container */}
+        <div className="bg-transparent relative w-full overflow-hidden">
+          <Wave
+            className="h-[85vh] m-0 rotate-180 left-0"
+            fill="white"
+            paused={false}
+            options={{
+              height: 20,
+              amplitude: 45,
+              speed: 0.1,
+              points: 5,
+            }}
+          />
+          {/* main first view container */}
+          <main
+            className="absolute top-[40vh] text-black left-1/2 text-center px-10 w-[60%]"
+            style={{ transform: "translate(-50%, -50%)" }}
+          >
+            <h1 className="text-5xl">02 Danial G g</h1>
+            <h3 className="text-3xl">
+              A and Computer Science student at the University of Toronto Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Neque ea unde molestias accusantium repudiandae voluptas aliquid adipisci dicta quasi,
+              labore officia cupiditate ipsam a asperiores deserunt illum tempore ut distinctio.. Lorem ipsum dolor sit
+            </h3>
+            <p className="">Good moring Danial</p>
+          </main>
         </div>
-        <Wave
-          className="rotate-180 m-0 h-[70vh]"
-          fill="white"
-          paused={false}
-          options={{
-            height: 20,
-            amplitude: 45,
-            speed: 0.15,
-            points: 5,
-          }}
-        />
-      </main>
+      </div>
       <Footer />
     </div>
   );
