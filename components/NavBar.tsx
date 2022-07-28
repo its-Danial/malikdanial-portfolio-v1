@@ -24,11 +24,11 @@ const NavBar: FC<NavBarProps> = (props) => {
   };
 
   return (
-    <div className="fixed h-24 w-full z-50">
+    <div className="fixed bg-blue-800 h-24 w-full z-50">
       <div className="flex justify-between items-center w-full h-full px-4 lg:pl-8 lg:pr-10  2xl:px-16">
         <Image
           className="rounded-full"
-          src={"/../public/assets/images/black-logo.png"}
+          src={"/../public/assets/images/white-logo.png"}
           width={65}
           height={65}
           alt="Malik Danial's logo"
@@ -38,27 +38,27 @@ const NavBar: FC<NavBarProps> = (props) => {
         <div>
           <ul className="hidden md:flex items-center space-x-10">
             <Link href="/">
-              <li className="text-sm text-nextBlue font-mono font-medium">
-                01. <span className="cursor-pointer text-gray-700 hover:text-nextBlue">Home</span>
+              <li className="text-sm text-blue-300 font-mono font-medium">
+                01. <span className="cursor-pointer text-gray-100 hover:text-blue-300">Home</span>
               </li>
             </Link>
             <Link href="/">
-              <li className="text-sm text-nextBlue font-mono font-medium">
-                02. <span className="cursor-pointer text-gray-700 hover:text-nextBlue ">About</span>
+              <li className="text-sm text-blue-300 font-mono font-medium">
+                02. <span className="cursor-pointer text-gray-100 hover:text-blue-300">About</span>
               </li>
             </Link>
             <Link href="/">
-              <li className="text-sm text-nextBlue font-mono font-medium">
-                03. <span className="cursor-pointer text-gray-700 hover:text-nextBlue ">Skill</span>
+              <li className="text-sm text-blue-300 font-mono font-medium">
+                03. <span className="cursor-pointer text-gray-100 hover:text-blue-300">Skill</span>
               </li>
             </Link>
             <Link href="/">
-              <li className="text-sm text-nextBlue font-mono font-medium">
-                04. <span className="cursor-pointer text-gray-700 hover:text-nextBlue ">Contact</span>
+              <li className="text-sm text-blue-300 font-mono font-medium">
+                04. <span className="cursor-pointer text-gray-100 hover:text-blue-300">Contact</span>
               </li>
             </Link>
 
-            <button className="px-4 py-[7px] text-base rounded-md border-2 border-blue-600 font-mono text-blue-600 hover:bg-blue-600/5 hover:scale-105 ease-in duration-200">
+            <button className="px-4 py-[7px] text-base rounded-md border-2 border-blue-300 font-mono text-blue-300 hover:bg-blue-600/5 hover:scale-105 ease-in duration-200">
               Resume
             </button>
           </ul>

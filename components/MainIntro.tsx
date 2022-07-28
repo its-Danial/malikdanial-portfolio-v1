@@ -8,9 +8,9 @@ const MainIntro: FC<MainIntroProps> = (props) => {
   return (
     <div className="relative h-[80vh] overflow-hidden">
       <Wave
-        className="h-full m-0 rotate-180"
+        className="h-full m-0 rotate-180 z-10"
         // #F8F0E3
-        fill="#F9FEFF"
+        fill="#1e40af"
         paused={false}
         options={{
           height: 20,
@@ -18,6 +18,7 @@ const MainIntro: FC<MainIntroProps> = (props) => {
           soints: 5,
         }}
       />
+
       {/* main first view container */}
       <main
         className="absolute w-full h-[75%] sm:h-auto top-[52%] md:top-[50%] left-[50%] overflow-hidden flex justify-center p-6 lg:px-24 md:py-10"
@@ -26,15 +27,15 @@ const MainIntro: FC<MainIntroProps> = (props) => {
         <div className="relative flex justify-between items-center overflow-hidden">
           <div className="md:ml-12 sm:w-1/2 w-2/3 justify-center flex">
             <div className=" flex flex-col space-y-0 lg:space-y-4 justify-center">
-              <h1 className="font-mono text-sm md:text-base text-slate-800 ">Hi, my name is</h1>
-              <h2 className="font-latoSans font-extrabold tracking-tight text-4xl md:text-5xl lg:text-6xl text-blue-700/90">
+              <h1 className="font-mono text-sm md:text-base text-blue-300 ">Hi, my name is</h1>
+              <h2 className="font-latoSans font-extrabold tracking-tight text-4xl md:text-5xl lg:text-6xl text-slate-200">
                 Malik Danial.
               </h2>
-              <h3 className="font-latoSans font-extrabold tracking-tight text-4xl md:text-5xl lg:text-6xl text-blue-600/70">
+              <h3 className="font-latoSans font-extrabold tracking-tight text-4xl md:text-5xl lg:text-6xl text-gray-400">
                 I{"'"}m a software engineer in making.
               </h3>
               <div className="w-[95%] sm:max-w-lg">
-                <p className="font-latoSans tracking-tight text-sm md:text-xl text-gray-500">
+                <p className="font-latoSans tracking-tight text-sm md:text-lg text-gray-400">
                   Im a software engineer student, currently studying in China
                 </p>
               </div>

@@ -8,6 +8,7 @@ module.exports = {
       },
       colors: {
         nextBlue: "#0070f3",
+        eggshell: "#F9FEFF",
       },
       animation: {
         spin: "spin 0.5s linear",

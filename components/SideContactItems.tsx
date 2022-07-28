@@ -8,29 +8,29 @@ type SideContactItemsProps = {};
 const SideContactItems: FC<SideContactItemsProps> = (props) => {
   return (
     <>
-      <ul className="fixed mx-8 bottom-0 left-0 text-gray-400 flex flex-col justify-between items-center w-auto h-80 z-50">
+      <ul className=" fixed mx-8 bottom-0 left-0 text-gray-500 hidden  md:flex flex-col justify-between items-center w-auto h-80 z-50">
         <div className="flex space-y-5 flex-col items-center">
-          <li className="hover:scale-125 hover:text-gray-700 cursor-pointer">
+          <li className="hover:scale-125 hover:text-gray-300 cursor-pointer">
             <FaGithub size={25} />
           </li>
-          <li className="hover:scale-125 hover:text-gray-700 cursor-pointer">
+          <li className="hover:scale-125 hover:text-gray-300 cursor-pointer">
             <AiFillWechat size={25} />
           </li>
-          <li className="hover:scale-125 hover:text-gray-700 cursor-pointer">
+          <li className="hover:scale-125 hover:text-gray-300 cursor-pointer">
             <FaLinkedin size={25} />
           </li>
-          <li className="hover:scale-125 hover:text-gray-700 cursor-pointer">
+          <li className="hover:scale-125 hover:text-gray-300 cursor-pointer">
             <FaFacebook size={20} />
           </li>
-          <li className="hover:scale-125 hover:text-gray-700 cursor-pointer">
+          <li className="hover:scale-125 hover:text-gray-300 cursor-pointer">
             <FaInstagramSquare size={25} />
           </li>
         </div>
 
         <li className="h-24 border border-gray-400"></li>
       </ul>
-      <ul className="fixed mx-8 bottom-0 right-0 text-gray-400 flex flex-col justify-between items-center w-7 h-64 z-50">
-        <li className="hover:scale-110 cursor-pointer hover:text-gray-700 rotate-90 font-mono text-sm">
+      <ul className="fixed mx-8 bottom-0 right-0 text-gray-500 hidden  md:flex flex-col justify-between items-center w-7 h-64 z-50">
+        <li className="hover:scale-110 cursor-pointer hover:text-gray-300 rotate-90 font-mono text-sm">
           itsmalikdanial@gmail.com
         </li>
 
