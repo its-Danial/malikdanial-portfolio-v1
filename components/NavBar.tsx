@@ -30,8 +30,8 @@ const NavBar: FC<NavBarProps> = (props) => {
   };
 
   return (
-    <div className="fixed h-20 w-full z-50">
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
+    <div className="fixed h-24  w-full z-50">
+      <div className="flex justify-between items-center w-full h-full px-4 lg:pl-8 lg:pr-10  2xl:px-16">
         <Image
           className="rounded-full"
           src={"/../public/assets/images/black-logo.png"}
@@ -42,19 +42,31 @@ const NavBar: FC<NavBarProps> = (props) => {
 
         {/* Large screen layout */}
         <div>
-          <ul className="hidden md:flex">
+          <ul className="hidden md:flex items-center space-x-10">
             <Link href="/">
-              <li className="ml-10 text-sm hover:border-b font-mono">01 Home</li>
+              <li className="text-sm text-nextBlue font-mono">
+                01. <span className="cursor-pointer text-gray-600 hover:text-nextBlue ">Home</span>
+              </li>
             </Link>
             <Link href="/">
-              <li className="ml-10 text-sm hover:border-b font-mono">02 About</li>
+              <li className="text-sm text-nextBlue font-mono">
+                02. <span className="cursor-pointer text-gray-600 hover:text-nextBlue ">About</span>
+              </li>
             </Link>
             <Link href="/">
-              <li className="ml-10 text-sm hover:border-b font-mono">03 Skills</li>
+              <li className="text-sm text-nextBlue font-mono">
+                03. <span className="cursor-pointer text-gray-600 hover:text-nextBlue ">Skill</span>
+              </li>
             </Link>
             <Link href="/">
-              <li className="ml-10 text-sm hover:border-b font-mono">04 Contact</li>
+              <li className="text-sm text-nextBlue font-mono">
+                04. <span className="cursor-pointer text-gray-600 hover:text-nextBlue ">Contact</span>
+              </li>
             </Link>
+
+            <button className="px-4 py-[6px] text-base rounded-md border-2 border-blue-600 font-mono text-blue-600 hover:bg-blue-600/5 hover:scale-105 ease-in duration-200">
+              Resume
+            </button>
           </ul>
         </div>
         {/* Mobile screen layout menu icon */}
