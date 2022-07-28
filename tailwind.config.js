@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         latoSans: ["Lato"],
       },
+      colors: {
+        nextBlue: "#0070f3",
+      },
     },
   },
   plugins: [],

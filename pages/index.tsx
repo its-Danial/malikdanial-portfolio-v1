@@ -2,15 +2,17 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Wave from "react-wavify";
 import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-[#0070f3] flex flex-col min-h-screen">
+    <div className="bg-nextBlue flex flex-col min-h-screen">
       <Head>
-        <title>Meet Danial</title>
-        <meta name="description" content="portfolio website for Malik Danial" />
+        <title>Danial | Software engineer</title>
+        <meta name="description" content="Portfolio website for Malik Danial" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <NavBar />
 
       {/* full page container */}
       <div className="flex-grow ">
