@@ -1,13 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Wave from "react-wavify";
 import Footer from "../components/Footer";
 import MainIntro from "../components/MainIntro";
 import NavBar from "../components/NavBar";
+import SideContactItems from "../components/SideContactItems";
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-nextBlue flex flex-col min-h-screen">
+    <div className="relative bg-blue-600 flex flex-col min-h-screen">
       <Head>
         <title>Danial | Software engineer</title>
         <meta name="description" content="Portfolio website for Malik Danial" />
@@ -15,10 +15,13 @@ const Home: NextPage = () => {
       </Head>
       <NavBar />
 
-      {/* full page container */}
-      <div className="flex-grow">
+      {/* Note: content */}
+      <div className="flex-grow ">
         <MainIntro />
       </div>
+
+      {/* Note: Fixed side contact items */}
+      <SideContactItems />
       <Footer />
     </div>
   );
