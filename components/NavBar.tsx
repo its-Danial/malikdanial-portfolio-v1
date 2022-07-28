@@ -38,22 +38,22 @@ const NavBar: FC<NavBarProps> = (props) => {
         <div>
           <ul className="hidden md:flex items-center space-x-10">
             <Link href="/">
-              <li className="text-sm text-nextBlue font-mono">
-                01. <span className="cursor-pointer text-gray-700 hover:text-nextBlue ">Home</span>
+              <li className="text-sm text-nextBlue font-mono font-medium">
+                01. <span className="cursor-pointer text-gray-700 hover:text-nextBlue">Home</span>
               </li>
             </Link>
             <Link href="/">
-              <li className="text-sm text-nextBlue font-mono">
+              <li className="text-sm text-nextBlue font-mono font-medium">
                 02. <span className="cursor-pointer text-gray-700 hover:text-nextBlue ">About</span>
               </li>
             </Link>
             <Link href="/">
-              <li className="text-sm text-nextBlue font-mono">
+              <li className="text-sm text-nextBlue font-mono font-medium">
                 03. <span className="cursor-pointer text-gray-700 hover:text-nextBlue ">Skill</span>
               </li>
             </Link>
             <Link href="/">
-              <li className="text-sm text-nextBlue font-mono">
+              <li className="text-sm text-nextBlue font-mono font-medium">
                 04. <span className="cursor-pointer text-gray-700 hover:text-nextBlue ">Contact</span>
               </li>
             </Link>
