@@ -1,9 +1,12 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import { BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineClose, AiFillWechat } from "react-icons/ai";
 import { FaGithub, FaLinkedin, FaInstagramSquare, FaFacebook } from "react-icons/fa";
+import { FiSun } from "react-icons/fi";
+import { RiMoonClearLine } from "react-icons/ri";
 
 type NavBarProps = {};
 
@@ -11,6 +14,13 @@ const NavBar: FC<NavBarProps> = (props) => {
   const [showSideDrawer, setShowSideDrawer] = useState(false);
   const [spinIcon, setSpinIcon] = useState(false);
   const [spinReserve, setSpinReserve] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  const { systemTheme, theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const onNavDrawerOpenHandler = () => {
     setShowSideDrawer(true);
@@ -23,8 +33,29 @@ const NavBar: FC<NavBarProps> = (props) => {
     setSpinReserve(true);
   };
 
+  const renderThemeChanger = () => {
+    if (!mounted) {
+      return null;
+    }
+    const currentTheme = theme === "system" ? systemTheme : theme;
+
+    if (currentTheme === "dark") {
+      return (
+        <button onClick={() => setTheme("light")} className="p-3 rounded-md bg-brightBlue/10 hover:bg-brightBlue/20">
+          <RiMoonClearLine size={20} className="text-brightBlue" />
+        </button>
+      );
+    } else {
+      return (
+        <button onClick={() => setTheme("dark")} className="p-3 rounded-md bg-brightBlue/10 hover:bg-brightBlue/20">
+          <FiSun size={20} className="text-brightBlue" />
+        </button>
+      );
+    }
+  };
+
   return (
-    <div className="fixed bg-blue-800 h-24 w-full z-50">
+    <div className="fixed bg-blue-800 dark:bg-slate-800 h-24 w-full z-50">
       <div className="flex justify-between items-center w-full h-full px-4 lg:pl-8 lg:pr-10  2xl:px-16">
         <Image
           className="rounded-full"
@@ -38,29 +69,30 @@ const NavBar: FC<NavBarProps> = (props) => {
         <div>
           <ul className="hidden md:flex items-center space-x-10">
             <Link href="/">
-              <li className="text-sm text-blue-300 font-mono font-medium">
+              <li className="text-sm  text-brightBlue font-mono font-medium">
                 01. <span className="cursor-pointer text-eggshell hover:text-blue-300">Home</span>
               </li>
             </Link>
             <Link href="#about">
-              <li className="text-sm text-blue-300 font-mono font-medium">
+              <li className="text-sm  text-brightBlue font-mono font-medium">
                 02. <span className="cursor-pointer text-eggshell hover:text-blue-300">About</span>
               </li>
             </Link>
             <Link href="/">
-              <li className="text-sm text-blue-300 font-mono font-medium">
+              <li className="text-sm text-brightBlue font-mono font-medium">
                 03. <span className="cursor-pointer text-eggshell hover:text-blue-300">Skill</span>
               </li>
             </Link>
             <Link href="/">
-              <li className="text-sm text-blue-300 font-mono font-medium">
+              <li className="text-sm text-brightBlue font-mono font-medium">
                 04. <span className="cursor-pointer text-eggshell hover:text-blue-300">Contact</span>
               </li>
             </Link>
 
-            <button className="px-4 py-[7px] text-base rounded-md border-2 border-blue-300 font-mono text-blue-200 hover:bg-blue-300/20 hover:scale-105 ease-in duration-200">
+            <button className="px-4 py-[7px] text-base rounded-md border-2 border-brightBlue font-mono text-brightBlue/90 hover:bg-brightBlue/20 hover:scale-105 ease-in duration-200">
               Resume
             </button>
+            <div>{renderThemeChanger()}</div>
           </ul>
         </div>
         {/* Mobile screen layout menu icon */}
