@@ -3,6 +3,7 @@ import { FC, useEffect, useState } from "react";
 import Wave from "react-wavify";
 import { useTheme } from "next-themes";
 import memoji from "../public/assets/images/memoji.png";
+import { motion } from "framer-motion";
 
 type MainIntroProps = {};
 
@@ -54,6 +55,8 @@ const MainIntro: FC<MainIntroProps> = (props) => {
     }
   };
 
+  // Note: text animation
+
   return (
     <div className="relative h-screen  overflow-hidden">
       {renderWave()}
@@ -66,13 +69,30 @@ const MainIntro: FC<MainIntroProps> = (props) => {
         <div className="relative flex justify-between items-center overflow-hidden">
           <div className="md:ml-12 sm:w-1/2 w-2/3 justify-center flex">
             <div className=" flex flex-col space-y-0 lg:space-y-4 justify-center">
-              <h1 className="font-mono text-sm md:text-base text-brightBlue">Hi, my name is</h1>
-              <h2 className="font-latoSans font-extrabold tracking-tight text-4xl md:text-5xl lg:text-6xl text-slate-300">
+              <motion.h1
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ type: "spring", stiffness: 200, delay: 0.6 }}
+                className="font-mono text-sm md:text-base text-brightBlue"
+              >
+                Hi, my name is
+              </motion.h1>
+              <motion.h2
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ type: "spring", stiffness: 200, delay: 1 }}
+                className="font-latoSans font-extrabold tracking-tight text-4xl md:text-5xl lg:text-6xl text-slate-300"
+              >
                 Malik Danial.
-              </h2>
-              <h3 className="font-latoSans font-extrabold tracking-tight text-4xl md:text-5xl lg:text-6xl text-gray-400">
+              </motion.h2>
+              <motion.h3
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ type: "spring", stiffness: 150, delay: 1.5 }}
+                className="font-latoSans font-extrabold tracking-tight text-4xl md:text-5xl lg:text-6xl text-gray-400"
+              >
                 I{"'"}m a software engineer in making.
-              </h3>
+              </motion.h3>
               <div className="w-[95%] sm:max-w-lg">
                 <p className="font-latoSans tracking-tight text-sm md:text-lg text-gray-400">
                   Im a software engineer student, currently studying in China
