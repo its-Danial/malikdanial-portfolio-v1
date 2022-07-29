@@ -37,9 +37,9 @@ const About: FC<AboutProps> = (props) => {
   };
 
   return (
-    <div id="about" className="scroll-mt-12 z-0 w-full md:h-screen p-2 flex items-center justify-center py-16 relative">
+    <div id="about" className="scroll-mt-8 z-0 w-full md:h-screen p-2 flex items-center justify-center py-16 relative">
       {renderBackground()}
-      <div className="z-50 p-12 w-[70%] h-[70%] overflow-hidden rounded-lg shadow-3xl bg-eggshell dark:bg-slate-800 md:grid grid-cols-3 gap-8">
+      <div className="z-50 p-12 w-[70%] h-[70%] overflow-hidden rounded-lg shadow-3xl shadow-slate-900 bg-eggshell dark:bg-slate-800 md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
           <p className="text-xl text-black dark:text-slate-200 font-mono">
             <span className="dark:text-brightBlue text-lightBlue">01.</span> About
@@ -51,7 +51,7 @@ const About: FC<AboutProps> = (props) => {
             suscipit quia accusantium eligendi repellendus perferendis blanditiis fugit unde, deleniti asperiores at
             beatae? Voluptatem, ipsum.
           </p>
-          <p className="py-2 text-gray-600">
+          <p className="py-2 text-gray-600 dark:text-slate-400">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. A neque optio fugit dolores asperiores. Dolorem,
             est? Reprehenderit nemo ad cum fuga natus quia error distinctio, eveniet ipsum repellat minima? Explicabo.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laudantium, mollitia quod in magni quas
@@ -60,7 +60,9 @@ const About: FC<AboutProps> = (props) => {
           </p>
 
           <Link href="/#projects">
-            <p className="py-2 text-gray-700 underline cursor-pointer">Check out some of my latest projects.</p>
+            <p className="py-2 text-gray-700 dark:text-slate-300 underline cursor-pointer">
+              Check out some of my latest projects.
+            </p>
           </Link>
         </div>
         <div className="w-full h-auto m-auto rounded-lg flex items-center justify-center p-2 hover:scale-105 ease-in duration-300">
