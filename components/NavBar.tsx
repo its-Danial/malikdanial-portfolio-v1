@@ -7,7 +7,7 @@ import { AiOutlineClose, AiFillWechat } from "react-icons/ai";
 import { FaGithub, FaLinkedin, FaInstagramSquare, FaFacebook } from "react-icons/fa";
 import { FiSun } from "react-icons/fi";
 import { RiMoonClearLine } from "react-icons/ri";
-
+import logo from "../public/assets/images/white-logo.png";
 type NavBarProps = {};
 
 const NavBar: FC<NavBarProps> = (props) => {
@@ -57,13 +57,7 @@ const NavBar: FC<NavBarProps> = (props) => {
   return (
     <div className="fixed bg-blue-800 dark:bg-slate-800 h-24 w-full z-50">
       <div className="flex justify-between items-center w-full h-full px-4 lg:pl-8 lg:pr-10  2xl:px-16">
-        <Image
-          className="rounded-full"
-          src={"/../public/assets/images/white-logo.png"}
-          width={65}
-          height={65}
-          alt="Malik Danial's logo"
-        />
+        <Image className="rounded-full" src={logo} width={65} height={65} alt="Malik Danial's logo" />
 
         {/* Large screen layout */}
         <div>

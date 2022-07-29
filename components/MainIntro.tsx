@@ -2,11 +2,12 @@ import Image from "next/image";
 import { FC, useEffect, useState } from "react";
 import Wave from "react-wavify";
 import { useTheme } from "next-themes";
+import memoji from "../public/assets/images/memoji.png";
 
 type MainIntroProps = {};
 
 const MainIntro: FC<MainIntroProps> = (props) => {
-  const { systemTheme, theme, setTheme } = useTheme();
+  const { systemTheme, theme } = useTheme();
 
   const currentTheme = theme === "system" ? systemTheme : theme;
 
@@ -81,7 +82,7 @@ const MainIntro: FC<MainIntroProps> = (props) => {
           </div>
 
           <div className="basis-1/3 md:flex">
-            <Image src={"/../public/assets/images/memoji.png"} width={400} height={400} alt="memoji" />
+            <Image src={memoji} width={400} height={400} alt="memoji" />
           </div>
         </div>
       </main>

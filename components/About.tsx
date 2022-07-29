@@ -7,7 +7,7 @@ import myImage from "../public/assets//images/me.jpg";
 type AboutProps = {};
 
 const About: FC<AboutProps> = (props) => {
-  const { systemTheme, theme, setTheme } = useTheme();
+  const { systemTheme, theme } = useTheme();
 
   const [mounted, setMounted] = useState(false);
 
@@ -27,12 +27,13 @@ const About: FC<AboutProps> = (props) => {
           className={`z-0 bg-center bg-cover absolute aspect-[960/550] bg-[url(../public/assets/svg/circle-scatter-dark-2.svg)] bg-no-repeat  w-full h-full`}
         ></div>
       );
-    } else
+    } else {
       return (
         <div
           className={`z-0 bg-center bg-cover absolute aspect-[960/550] bg-[url(../public/assets/svg/circle-scatter-light.svg)] bg-no-repeat  w-full h-full`}
         ></div>
       );
+    }
   };
 
   return (
