@@ -7,29 +7,34 @@ type AboutProps = {};
 
 const About: FC<AboutProps> = (props) => {
   return (
-    <div id="about" className="w-full md:h-screen p-2 flex items-center py-16">
-      <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
+    <div id="about" className="scroll-mt-12 z-0 w-full md:h-screen p-2 flex items-center justify-center py-16 relative">
+      <div className="z-0 bg-center bg-cover absolute aspect-[900/450] bg-no-repeat bg-[url(../public/assets/svg/circle-scatter-haikei-big-2.svg)] w-full h-full"></div>
+      <div className="z-50 p-12 w-[70%] h-[70%] overflow-hidden rounded-lg shadow-3xl bg-eggshell md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
-          <p className="uppercase text-xl  text-gray-50 font-mono">01. About</p>
-          <p className="py-2 text-gray-100">/ / I am not your average developer</p>
-          <p className="py-2 text-gray-100">
-            I have spent the last 12 years in the fire service working as a professional firefighter/paramedic. I have
-            always had a knack for technology and working with computers. In 2019 I started working with HTML and CSS to
-            make some minor edits on a small business website that I was operating. What I thought was just a few small
-            edits turned into a love for programming.
+          <p className="text-xl text-black font-mono">
+            <span className="text-lightBlue">01.</span> About
           </p>
-          <p className="py-2 text-gray-100">
-            Fascinated with how intricate programming can be I was quickly drawn to learn more. I started learning
-            javascript and was even more enthused with making websites interactive. I then started freelancing for
-            e-commerce companies on the Shopify platform. I am now spending my time building projects with React JS,
-            Firebase, and learning new technologies.
+          <p className="py-2 text-gray-600">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A neque optio fugit dolores asperiores. Dolorem,
+            est? Reprehenderit nemo ad cum fuga natus quia error distinctio, eveniet ipsum repellat minima? Explicabo.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laudantium, mollitia quod in magni quas
+            suscipit quia accusantium eligendi repellendus perferendis blanditiis fugit unde, deleniti asperiores at
+            beatae? Voluptatem, ipsum.
           </p>
+          <p className="py-2 text-gray-600">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A neque optio fugit dolores asperiores. Dolorem,
+            est? Reprehenderit nemo ad cum fuga natus quia error distinctio, eveniet ipsum repellat minima? Explicabo.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laudantium, mollitia quod in magni quas
+            suscipit quia accusantium eligendi repellendus perferendis blanditiis fugit unde, deleniti asperiores at
+            beatae? Voluptatem, ipsum.
+          </p>
+
           <Link href="/#projects">
-            <p className="py-2 text-gray-100 underline cursor-pointer">Check out some of my latest projects.</p>
+            <p className="py-2 text-gray-700 underline cursor-pointer">Check out some of my latest projects.</p>
           </Link>
         </div>
-        <div className="w-full h-auto m-auto  flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
-          <Image src={myImage} height={400} width={400} className="" alt="/" />
+        <div className="w-full h-auto m-auto rounded-lg flex items-center justify-center p-2 hover:scale-105 ease-in duration-300">
+          <Image src={myImage} height={560} width={450} className="rounded-md" alt="/" />
         </div>
       </div>
     </div>

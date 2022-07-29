@@ -39,51 +39,54 @@ const NavBar: FC<NavBarProps> = (props) => {
           <ul className="hidden md:flex items-center space-x-10">
             <Link href="/">
               <li className="text-sm text-blue-300 font-mono font-medium">
-                01. <span className="cursor-pointer text-gray-100 hover:text-blue-300">Home</span>
+                01. <span className="cursor-pointer text-eggshell hover:text-blue-300">Home</span>
+              </li>
+            </Link>
+            <Link href="#about">
+              <li className="text-sm text-blue-300 font-mono font-medium">
+                02. <span className="cursor-pointer text-eggshell hover:text-blue-300">About</span>
               </li>
             </Link>
             <Link href="/">
               <li className="text-sm text-blue-300 font-mono font-medium">
-                02. <span className="cursor-pointer text-gray-100 hover:text-blue-300">About</span>
+                03. <span className="cursor-pointer text-eggshell hover:text-blue-300">Skill</span>
               </li>
             </Link>
             <Link href="/">
               <li className="text-sm text-blue-300 font-mono font-medium">
-                03. <span className="cursor-pointer text-gray-100 hover:text-blue-300">Skill</span>
-              </li>
-            </Link>
-            <Link href="/">
-              <li className="text-sm text-blue-300 font-mono font-medium">
-                04. <span className="cursor-pointer text-gray-100 hover:text-blue-300">Contact</span>
+                04. <span className="cursor-pointer text-eggshell hover:text-blue-300">Contact</span>
               </li>
             </Link>
 
-            <button className="px-4 py-[7px] text-base rounded-md border-2 border-blue-300 font-mono text-blue-300 hover:bg-blue-600/5 hover:scale-105 ease-in duration-200">
+            <button className="px-4 py-[7px] text-base rounded-md border-2 border-blue-300 font-mono text-blue-200 hover:bg-blue-300/20 hover:scale-105 ease-in duration-200">
               Resume
             </button>
           </ul>
         </div>
         {/* Mobile screen layout menu icon */}
-        <div onClick={onNavDrawerOpenHandler} className="md:hidden rounded-full p-1 hover:bg-gray-200 cursor-pointer">
+        <div
+          onClick={onNavDrawerOpenHandler}
+          className="md:hidden rounded-full p-1 hover:bg-blue-300/10 cursor-pointer"
+        >
           <BiMenuAltRight
             size={40}
-            className={`text-blue-600 ${spinIcon ? "animate-spin" : ""} ${spinReserve ? "animate-reverse-spin" : ""}`}
+            className={`text-blue-300 ${spinIcon ? "animate-spin" : ""} ${spinReserve ? "animate-reverse-spin" : ""}`}
           />
         </div>
       </div>
       {/* Back drop */}
-      <div className={showSideDrawer ? "md:hidden fixed left-0 top-0 h-screen w-full bg-black/20" : ""}>
+      <div className={showSideDrawer ? "md:hidden fixed left-0 top-0 h-screen w-full bg-black/30" : ""}>
         {/* Side Drawer */}
         <div
           className={
             showSideDrawer
-              ? "fixed right-0 top-0 h-screen w-[65%] sm:w-[55%] md:w-[45%] bg-white  duration-[230ms] "
+              ? "fixed right-0 top-0 h-screen w-[65%] sm:w-[55%] md:w-[45%] bg-eggshell  duration-[230ms] "
               : "fixed right-[-100%] top-0  ease-in duration-500"
           }
         >
           <div className="flex h-20 items-center justify-end px-2">
-            <div onClick={onNavDrawerCloseHandler} className="rounded-full  p-1 hover:bg-gray-200 cursor-pointer">
-              <AiOutlineClose size={40} className={`text-blue-600 ${spinIcon ? "animate-spin" : ""}`} />
+            <div onClick={onNavDrawerCloseHandler} className="rounded-full  p-1  hover:bg-blue-300/10 cursor-pointer">
+              <AiOutlineClose size={40} className={`text-blue-300 ${spinIcon ? "animate-spin" : ""}`} />
             </div>
           </div>
           <div className="px-5 pt-2 h-[80%]">

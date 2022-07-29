@@ -6,9 +6,9 @@ type MainIntroProps = {};
 
 const MainIntro: FC<MainIntroProps> = (props) => {
   return (
-    <div className="relative h-[80vh] overflow-hidden">
+    <div className="relative h-screen  overflow-hidden">
       <Wave
-        className="h-full m-0 rotate-180 z-10"
+        className="h-[85vh] m-0 rotate-180 z-10"
         // #F8F0E3
         fill="#1e40af"
         paused={false}
@@ -21,14 +21,14 @@ const MainIntro: FC<MainIntroProps> = (props) => {
 
       {/* main first view container */}
       <main
-        className="absolute w-full h-[75%] sm:h-auto top-[52%] md:top-[50%] left-[50%] overflow-hidden flex justify-center p-6 lg:px-24 md:py-10"
+        className="absolute w-full h-[75%] sm:h-auto top-[35%] md:top-[42%] left-[50%] overflow-hidden flex justify-center p-6 lg:px-24 md:py-10"
         style={{ transform: "translate(-50%, -50%)" }}
       >
         <div className="relative flex justify-between items-center overflow-hidden">
           <div className="md:ml-12 sm:w-1/2 w-2/3 justify-center flex">
             <div className=" flex flex-col space-y-0 lg:space-y-4 justify-center">
-              <h1 className="font-mono text-sm md:text-base text-blue-300 ">Hi, my name is</h1>
-              <h2 className="font-latoSans font-extrabold tracking-tight text-4xl md:text-5xl lg:text-6xl text-slate-200">
+              <h1 className="font-mono text-sm md:text-base text-blue-300">Hi, my name is</h1>
+              <h2 className="font-latoSans font-extrabold tracking-tight text-4xl md:text-5xl lg:text-6xl text-slate-300">
                 Malik Danial.
               </h2>
               <h3 className="font-latoSans font-extrabold tracking-tight text-4xl md:text-5xl lg:text-6xl text-gray-400">

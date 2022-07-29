@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import MainIntro from "../components/MainIntro";
 import NavBar from "../components/NavBar";
 import SideContactItems from "../components/SideContactItems";
+import Skills from "../components/Skills";
 
 const Home: NextPage = () => {
   return (
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
       <div className="flex-grow ">
         <MainIntro />
         <About />
+        <Skills />
       </div>
 
       {/* Note: Fixed side contact items */}
