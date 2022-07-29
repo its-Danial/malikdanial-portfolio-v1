@@ -1,14 +1,15 @@
-import { FC, useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
+import { FC, useEffect, useState } from "react";
+import { AiFillWechat, AiOutlineClose } from "react-icons/ai";
 import { BiMenuAltRight } from "react-icons/bi";
-import { AiOutlineClose, AiFillWechat } from "react-icons/ai";
-import { FaGithub, FaLinkedin, FaInstagramSquare, FaFacebook } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { FiSun } from "react-icons/fi";
 import { RiMoonClearLine } from "react-icons/ri";
 import logo from "../public/assets/images/white-logo.png";
-import { motion, AnimatePresence } from "framer-motion";
+
 type NavBarProps = {};
 
 const NavBar: FC<NavBarProps> = (props) => {
