@@ -94,7 +94,7 @@ const NavBar: FC<NavBarProps> = (props) => {
         <motion.div
           initial={{ height: 0 }}
           animate={{ height: 96, transition: { duration: 0.5 } }}
-          className={`fixed bg-blue-800 dark:bg-slate-800  w-full z-50`}
+          className={`fixed bg-blue-800 dark:bg-slate-800 w-full z-50`}
           exit={{ height: 0, transition: { duration: 0.3 } }}
         >
           <div className="flex justify-between items-center w-full h-full px-4 lg:pl-8 lg:pr-10  2xl:px-16">
@@ -102,7 +102,7 @@ const NavBar: FC<NavBarProps> = (props) => {
 
             {/* Large screen layout */}
             <div>
-              <ul className="hidden md:flex items-center space-x-10">
+              <ul className="hidden md:flex items-center space-x-6">
                 <Link href="/">
                   <li className="text-sm  text-brightBlue font-mono font-medium">
                     01. <span className="cursor-pointer text-eggshell hover:text-blue-300">Home</span>
@@ -118,9 +118,14 @@ const NavBar: FC<NavBarProps> = (props) => {
                     03. <span className="cursor-pointer text-eggshell hover:text-blue-300">Skill</span>
                   </li>
                 </Link>
+                <Link href="/#projects">
+                  <li className="text-sm text-brightBlue font-mono font-medium">
+                    04. <span className="cursor-pointer text-eggshell hover:text-blue-300">Project</span>
+                  </li>
+                </Link>
                 <Link href="/">
                   <li className="text-sm text-brightBlue font-mono font-medium">
-                    04. <span className="cursor-pointer text-eggshell hover:text-blue-300">Contact</span>
+                    05. <span className="cursor-pointer text-eggshell hover:text-blue-300">Contact</span>
                   </li>
                 </Link>
 

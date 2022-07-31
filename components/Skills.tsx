@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import Image from "next/image";
 //front-end langauges
 import tsLogo from "../public/assets/skills/front-end/typescript.svg";
@@ -29,6 +29,7 @@ import herokuLogo from "../public/assets/skills/back-end/heroku.svg";
 import dockerLogo from "../public/assets/skills/back-end/docker.svg";
 import tensorFlowLogo from "../public/assets/skills/back-end/tensorflow.svg";
 import firebaseLogo from "../public/assets/skills/front-end/firebase.svg";
+import { useTheme } from "next-themes";
 
 type SkillsProps = {};
 
@@ -71,72 +72,104 @@ const Skills: FC<SkillsProps> = (props) => {
     { logo: tensorFlowLogo, name: "TensorFlow", level: "Beginner" },
   ];
 
+  const { systemTheme, theme } = useTheme();
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const currentTheme = theme === "system" ? systemTheme : theme;
+
+  const renderBackground = () => {
+    if (!mounted) {
+      return null;
+    }
+    if (currentTheme === "dark") {
+      return (
+        <div
+          className={`z-[-100] bg-center bg-cover absolute aspect-[960/550] bg-[url(../public/assets/svg/layered-waves-dark.svg)] bg-no-repeat  w-full h-full`}
+        ></div>
+      );
+    } else {
+      return (
+        <div
+          className={`z-[-100] bg-center bg-cover absolute aspect-[960/550] bg-[url(../public/assets/svg/layered-waves-light.svg)] bg-no-repeat  w-full h-full`}
+        ></div>
+      );
+    }
+  };
+
   return (
-    <div id="skills" className="w-full p-6 md:px-24 md:py-14  flex flex-col space-y-10 h-screen ">
-      <h2 className="font-mono mx-auto text-2xl dark: text-brightBlue">
-        03. <span className="text-slate-200">Skills & Technologies</span>
-      </h2>
-      <div className="w-full h-[90%] my-auto flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-9">
-        <div className="flex-1 dark:bg-slate-800 shadow-2xl rounded-md p-6">
-          <div className="h-full w-full">
-            <h4 className="dark:text-sky-300 text-xl text-center">Front-end Development</h4>
-            <div className="px-4 mt-6">
-              <h5 className="dark:text-brightBlue font-latoSans text-base">Languages</h5>
-              <div className="my-6 grid grid-cols-3 gap-y-8 gap-x-6">
-                {frontEndLangauges.map((skill) => (
-                  <div key={skill.name} className="hover:scale-105 flex flex-row space-x-2 items-center">
-                    <Image src={skill.logo} width={40} height={40} alt={skill.name} />
-                    <div className="flex flex-col text-gray-300">
-                      <h5 className="text-xl dark:text-slate-100">{skill.name}</h5>
-                      <p className="text-xs dark:text-gray-400">{skill.level}</p>
+    <div id="skills" className="relative w-full h-screen ">
+      {renderBackground()}
+      <div className=" p-6 md:px-24 md:py-14 space-y-10">
+        <h2 className=" font-mono text-center mx-auto text-2xl text-blue-800 dark:text-brightBlue">
+          03. <span className="text-gray-700 dark:text-slate-200">Skills & Technologies</span>
+        </h2>
+        <div className="z-50 w-full h-[90%] my-auto flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-9">
+          <div className="flex-1 bg-eggshell dark:bg-slate-800 shadow-3xl rounded-lg p-6">
+            <div className="h-full w-full">
+              <h4 className="text-gray-600 dark:text-sky-300 text-xl text-center">Front-end Development</h4>
+              <div className="px-4 mt-6">
+                <h5 className="text-blue-800 dark:text-brightBlue font-latoSans text-base">Languages</h5>
+                <div className="my-6 grid grid-cols-3 gap-y-8 gap-x-6">
+                  {frontEndLangauges.map((skill) => (
+                    <div key={skill.name} className="hover:scale-105 flex flex-row space-x-2 items-center">
+                      <Image src={skill.logo} width={40} height={40} alt={skill.name} />
+                      <div className="flex flex-col">
+                        <h5 className="text-xl text-gray-700 dark:text-slate-100">{skill.name}</h5>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">{skill.level}</p>
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-              <h5 className=" dark:text-brightBlue font-latoSans text-base">Technologies</h5>
-              <div className="mt-6 grid grid-cols-3 gap-y-8 gap-x-6">
-                {frontEndTechnologies.map((skill) => (
-                  <div key={skill.name} className="hover:scale-105 flex flex-row space-x-2  items-center">
-                    <Image src={skill.logo} width={40} height={40} alt={skill.name} />
-                    <div className="flex flex-col text-gray-300">
-                      <h5 className="text-xl dark:text-slate-100">{skill.name}</h5>
-                      <p className="text-xs dark:text-gray-400">{skill.level}</p>
+                  ))}
+                </div>
+                <h5 className="text-blue-800 dark:text-brightBlue font-latoSans text-base">Technologies</h5>
+                <div className="mt-6 grid grid-cols-3 gap-y-8 gap-x-6">
+                  {frontEndTechnologies.map((skill) => (
+                    <div key={skill.name} className="hover:scale-105 flex flex-row space-x-2  items-center">
+                      <Image src={skill.logo} width={40} height={40} alt={skill.name} />
+                      <div className="flex flex-col ">
+                        <h5 className="text-xl text-gray-700 dark:text-slate-100">{skill.name}</h5>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">{skill.level}</p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Note */}
-        <div className="flex-1 dark:bg-slate-800 shadow-2xl rounded-md p-6">
-          <div className="h-full w-full">
-            <h4 className="dark:text-sky-300 text-xl text-center">Back-end Development</h4>
-            <div className="px-4 mt-6">
-              <h5 className="dark:text-brightBlue font-latoSans text-base">Languages</h5>
-              <div className="my-7 grid grid-cols-3 gap-y-8 gap-x-6">
-                {backEndLangauges.map((skill) => (
-                  <div key={skill.name} className="hover:scale-105 flex flex-row space-x-2 items-center">
-                    <Image src={skill.logo} width={40} height={40} alt={skill.name} />
-                    <div className="flex flex-col text-gray-300">
-                      <h5 className="text-xl dark:text-slate-100">{skill.name}</h5>
-                      <p className="text-xs dark:text-gray-400">{skill.level}</p>
+          {/* Note */}
+          <div className="flex-1 bg-eggshell dark:bg-slate-800 shadow-3xl rounded-lg p-6">
+            <div className="h-full w-full">
+              <h4 className="text-gray-600 dark:text-sky-300 text-xl text-center">Back-end Development</h4>
+              <div className="px-4 mt-6">
+                <h5 className="text-blue-800 dark:text-brightBlue font-latoSans text-base">Languages</h5>
+                <div className="my-7 grid grid-cols-3 gap-y-8 gap-x-6">
+                  {backEndLangauges.map((skill) => (
+                    <div key={skill.name} className="hover:scale-105 flex flex-row space-x-2 items-center">
+                      <Image src={skill.logo} width={40} height={40} alt={skill.name} />
+                      <div className="flex flex-col">
+                        <h5 className="text-xl text-gray-700 dark:text-slate-100">{skill.name}</h5>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">{skill.level}</p>
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-              <h5 className="mt-24 dark:text-brightBlue font-latoSans text-base">Technologies</h5>
-              <div className="mt-6 grid grid-cols-3 gap-y-8 gap-x-6">
-                {backEndTechologis.map((skill) => (
-                  <div key={skill.name} className="hover:scale-105 flex flex-row space-x-2  items-center">
-                    <Image src={skill.logo} width={40} height={40} alt={skill.name} />
-                    <div className="flex flex-col text-gray-300">
-                      <h5 className="text-xl dark:text-slate-100">{skill.name}</h5>
-                      <p className="text-xs dark:text-gray-400">{skill.level}</p>
+                  ))}
+                </div>
+                <h5 className="mt-24 dark:text-brightBlue font-latoSans text-base">Technologies</h5>
+                <div className="mt-6 grid grid-cols-3 gap-y-8 gap-x-6">
+                  {backEndTechologis.map((skill) => (
+                    <div key={skill.name} className="hover:scale-105 flex flex-row space-x-2  items-center">
+                      <Image src={skill.logo} width={40} height={40} alt={skill.name} />
+                      <div className="flex flex-col">
+                        <h5 className="text-xl dark:text-slate-100">{skill.name}</h5>
+                        <p className="text-xs dark:text-gray-400">{skill.level}</p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>

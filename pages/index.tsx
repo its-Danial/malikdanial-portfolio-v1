@@ -4,6 +4,7 @@ import About from "../components/About";
 import Footer from "../components/Footer";
 import MainIntro from "../components/MainIntro";
 import NavBar from "../components/NavBar";
+import Projects from "../components/Projects";
 import SideContactItems from "../components/SideContactItems";
 import Skills from "../components/Skills";
 
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
         <MainIntro />
         <About />
         <Skills />
+        <Projects />
       </div>
 
       {/* Note: Fixed side contact items */}
