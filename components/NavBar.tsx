@@ -108,12 +108,12 @@ const NavBar: FC<NavBarProps> = (props) => {
                     01. <span className="cursor-pointer text-eggshell hover:text-blue-300">Home</span>
                   </li>
                 </Link>
-                <Link href="#about">
+                <Link href="/#about">
                   <li className="text-sm  text-brightBlue font-mono font-medium">
                     02. <span className="cursor-pointer text-eggshell hover:text-blue-300">About</span>
                   </li>
                 </Link>
-                <Link href="/">
+                <Link href="/#skills">
                   <li className="text-sm text-brightBlue font-mono font-medium">
                     03. <span className="cursor-pointer text-eggshell hover:text-blue-300">Skill</span>
                   </li>
