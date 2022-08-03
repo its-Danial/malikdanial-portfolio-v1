@@ -57,27 +57,28 @@ const MainIntro: FC<MainIntroProps> = (props) => {
   };
 
   // Note: text animation
-  const TEXTS = ["sat lover", "traveler", "software engineer"];
+  const TEXTS = ["software engineer 💻", "cat owner 🐈", "traveler 🌎", "polyglot 🗣", "software engineer 💻"];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const intervalId = setInterval(
       () => setIndex((index) => (index + 1 != TEXTS.length ? index + 1 : index)),
-      3000 // every 3 seconds
+      1500 // every 3 seconds
     );
     return () => clearTimeout(intervalId);
   }, []);
+
   return (
-    <div className="relative h-screen  overflow-hidden">
+    <div className="relative h-screen overflow-hidden">
       {renderWave()}
 
       {/* main first view container */}
       <main
-        className="absolute w-full h-[70%] sm:h-auto top-[55%] md:top-[42%] left-[50%] overflow-hidden p-6 lg:px-24 md:py-10"
+        className="absolute w-full h-full sm:h-auto top-[60%] sm:top-[48%] left-[50%] overflow-hidden p-6 lg:px-24 md:py-10"
         style={{ transform: "translate(-50%, -50%)" }}
       >
-        <div className="w-full mx-auto relative flex  sm:justify-between sm:items-center overflow-hidden">
-          <div className="md:ml-12 sm:w-[1/2]  w-2/3 flex">
+        <div className="w-full mx-auto relative flex flex-col md:flex-row sm:justify-between sm:items-center overflow-hidden">
+          <div className="md:ml-12 sm:w-[1/2]  w-full flex">
             <div className="w-full flex flex-col space-y-0 lg:space-y-4 justify-center">
               <motion.h1
                 initial={{ opacity: 0, x: -200 }}
@@ -98,17 +99,14 @@ const MainIntro: FC<MainIntroProps> = (props) => {
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ type: "spring", stiffness: 150, delay: 2.1, delayChildren: 0.3, staggerChildren: 0.2 }}
+                transition={{ type: "spring", stiffness: 150, delay: 2, delayChildren: 0.1, staggerChildren: 0.1 }}
               >
                 <h3 className="font-latoSans font-extrabold tracking-tight text-4xl md:text-5xl lg:text-6xl text-gray-400">
-                  I{"'"}m a
-                  <span className="font-latoSans font-extrabold tracking-tight text-4xl md:text-5xl lg:text-6xl text-gray-400">
-                    {" "}
-                    <TextTransition style={{ maxWidth: "95%" }} inline springConfig={presets.wobbly}>
-                      {TEXTS[index % TEXTS.length]}
-                    </TextTransition>
-                    .
-                  </span>
+                  I{"'"}m a{" "}
+                  <TextTransition style={{ maxWidth: "95%" }} inline springConfig={presets.wobbly}>
+                    {TEXTS[index % TEXTS.length]}
+                  </TextTransition>
+                  .
                 </h3>
               </motion.div>
               <motion.div
@@ -130,7 +128,7 @@ const MainIntro: FC<MainIntroProps> = (props) => {
             initial={{ opacity: 0, x: 200 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ type: "spring", stiffness: 150, delay: 0.5 }}
-            className="basis-[30%] md:basis-1/3 md:flex"
+            className="basis-[30%] md:basis-1/3 mx-auto md:flex"
           >
             <Image src={memoji} width={400} height={400} alt="memoji" />
           </motion.div>

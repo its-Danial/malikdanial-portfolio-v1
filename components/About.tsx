@@ -39,7 +39,7 @@ const About: FC<AboutProps> = (props) => {
   return (
     <div id="about" className="scroll-mt-0 z-0 w-full md:h-screen p-2 flex items-center justify-center py-16 relative">
       {renderBackground()}
-      <div className="z-50 p-12 w-[70%] h-[70%] overflow-hidden rounded-lg shadow-3xl dark:shadow-slate-900 bg-eggshell dark:bg-slate-800 md:grid grid-cols-3 gap-8">
+      <div className="z-50 p-12  h-full w-[70%] xl:h-[70%] overflow-hidden rounded-lg shadow-3xl dark:shadow-slate-900 bg-eggshell dark:bg-slate-800 md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
           <p className="text-xl text-black dark:text-slate-200 font-mono">
             <span className="dark:text-brightBlue text-lightBlue">01.</span> About
