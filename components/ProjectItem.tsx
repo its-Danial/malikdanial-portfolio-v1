@@ -1,26 +1,51 @@
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import { FC } from "react";
+import { FaGithub, FaInfoCircle } from "react-icons/fa";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 type ProjectItemProps = {
   backgroundImg: StaticImageData;
   title: string;
-  techStack: string;
+  techStack: string[];
   projectUrl: string;
 };
 
-const ProjectItem: FC<ProjectItemProps> = ({ title, backgroundImg, techStack, projectUrl }) => {
+const ProjectItem: FC<ProjectItemProps> = (props) => {
   return (
-    <div className=" bg-eggshell dark:bg-slate-900 relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]">
-      <Image className="rounded-xl group-hover:opacity-10" src={backgroundImg} alt="/" />
-      <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-        <h3 className="text-2xl text-white tracking-wider text-center">{title}</h3>
-        <p className="pb-4 pt-2 text-white text-center">{techStack}</p>
-        <Link href={projectUrl}>
-          <p className="text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer">
-            More Info
-          </p>
-        </Link>
+    <div className="bg-eggshell dark:bg-slate-900 flex flex-col rounded-lg shadow-3xl dark:shadow-slate-900">
+      <Link href={props.projectUrl}>
+        <div className="relative group cursor-pointer">
+          <Image className="rounded-xl group-hover:opacity-30 " src={props.backgroundImg} alt="/" />
+          <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-lightBlue dark:text-brightBlue">
+            <FaInfoCircle size={40} />
+          </div>
+        </div>
+      </Link>
+      <div className="px-4 pb-2 space-y-2">
+        <div className="flex flex-row justify-between">
+          <div className="flex flex-row space-x-3 items-center">
+            <h4 className="dark:text-gray-100 font-latoSans">{props.title}</h4>
+            <HiOutlineExternalLink
+              className="hover:text-lightBlue dark:text-gray-400 cursor-pointer dark:hover:text-brightBlue hover:scale-125"
+              size={22}
+            />
+          </div>
+          <FaGithub
+            className="hover:text-lightBlue dark:text-gray-400 cursor-pointer dark:hover:text-brightBlue hover:scale-125"
+            size={22}
+          />
+        </div>
+        <p className="text-xs dark:text-gray-300">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ipsam a excepturi voluptatem ratione tenetur
+        </p>
+        <div className="flex flex-wrap space-x-4">
+          {props.techStack.map((name) => (
+            <p key={name} className="text-xs font-mono text-gray-600 dark:text-gray-400">
+              {name}
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   );

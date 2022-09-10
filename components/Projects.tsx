@@ -3,6 +3,7 @@ import { FC, useEffect, useState } from "react";
 import Wave from "react-wavify";
 import ProjectItem from "./ProjectItem";
 import img from "../public/assets/images/landingPage.png";
+import Link from "next/link";
 
 type ProjectsProps = {};
 
@@ -54,24 +55,71 @@ const Projects: FC<ProjectsProps> = (props) => {
     }
   };
   return (
-    <div id="projects" className="w-full min-h-screen h-full  relative z-40">
+    <div id="projects" className="w-full min-h-screen h-full relative z-40 ">
       {renderWave()}
       <div
-        className="absolute w-[90%] h-full top-[50%] left-[50%]  overflow-y-auto  space-y-10"
+        // overflow-y-auto
+        className="absolute w-[90%] h-full top-[50%] left-[50%] "
         style={{ transform: "translate(-50%, -50%)" }}
       >
-        <h2 className="font-mono text-center mx-auto text-2xl text-brightBlue">
+        <h2 className="font-mono text-center mx-auto text-2xl text-brightBlue mb-10">
           04. <span className=" text-slate-200">Some Things I’ve Built</span>
         </h2>
 
         {/* <div className="w-full h-full overflow-scroll"> */}
-        <div className="grid md:grid-cols-2 auto-rows-min gap-6">
-          <ProjectItem title="Property Finder" backgroundImg={img} projectUrl="/property" techStack="React JS" />
-          <ProjectItem title="Property Finder" backgroundImg={img} projectUrl="/property" techStack="React JS" />
-          <ProjectItem title="Property Finder" backgroundImg={img} projectUrl="/property" techStack="React JS" />
-          <ProjectItem title="Property Finder" backgroundImg={img} projectUrl="/property" techStack="React JS" />
+        <div className="grid sm:grid-cols-3 gap-8 gap-y-4 md:px-5">
+          <ProjectItem
+            title="Property Finder"
+            backgroundImg={img}
+            projectUrl="/properasdddty"
+            techStack={["ReactJS", "MaterialUI"]}
+          />
+          <ProjectItem
+            title="Property Finder"
+            backgroundImg={img}
+            projectUrl="/propertsy12"
+            techStack={["ReactJS", "MaterialUI"]}
+          />
+          <div className="hidden md:block">
+            <ProjectItem
+              title="Property Finder"
+              backgroundImg={img}
+              projectUrl="/property1"
+              techStack={["ReactJS", "MaterialUI"]}
+            />
+          </div>
+          <div className="hidden md:block">
+            <ProjectItem
+              title="Property Finder"
+              backgroundImg={img}
+              projectUrl="/property2"
+              techStack={["ReactJS", "MaterialUI"]}
+            />
+          </div>
+          <div className="hidden md:block">
+            <ProjectItem
+              title="Property Finder"
+              backgroundImg={img}
+              projectUrl="/property3"
+              techStack={["ReactJS", "MaterialUI"]}
+            />
+          </div>
+          <div className="hidden md:block">
+            <ProjectItem
+              title="Property Finder"
+              backgroundImg={img}
+              projectUrl="/property4"
+              techStack={["ReactJS", "MaterialUI"]}
+            />
+          </div>
         </div>
-        {/* </div> */}
+        <div className="flex justify-center">
+          <Link href="/archive">
+            <button className="mt-4 px-4 py-2 rounded-md border-2 dark:border-brightBlue dark:text-brightBlue border-lightBlue font-mono text-lightBlue text-xs hover:bg-blue-600/5 dark:hover:bg-brightBlue/20 hover:scale-105 ease-in duration-200">
+              View Archive
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );
