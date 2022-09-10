@@ -54,20 +54,24 @@ const Projects: FC<ProjectsProps> = (props) => {
     }
   };
   return (
-    <div id="projects" className="w-full h-screen relative  z-40">
+    <div id="projects" className="w-full min-h-screen h-full  relative z-40">
       {renderWave()}
       <div
-        className="absolute w-full h-full top-[50%] left-[50%] overflow-hidden "
+        className="absolute w-[90%] h-full top-[50%] left-[50%]  overflow-y-auto  space-y-10"
         style={{ transform: "translate(-50%, -50%)" }}
       >
-        <p className="text-xl text-black dark:text-slate-200 font-mono">
-          <span className="dark:text-brightBlue text-lightBlue">01.</span> About
-        </p>
-        <h2 className="py-4">What I&apos;ve Built</h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <h2 className="font-mono text-center mx-auto text-2xl text-brightBlue">
+          04. <span className=" text-slate-200">Some Things I’ve Built</span>
+        </h2>
+
+        {/* <div className="w-full h-full overflow-scroll"> */}
+        <div className="grid md:grid-cols-2 auto-rows-min gap-6">
+          <ProjectItem title="Property Finder" backgroundImg={img} projectUrl="/property" techStack="React JS" />
+          <ProjectItem title="Property Finder" backgroundImg={img} projectUrl="/property" techStack="React JS" />
           <ProjectItem title="Property Finder" backgroundImg={img} projectUrl="/property" techStack="React JS" />
           <ProjectItem title="Property Finder" backgroundImg={img} projectUrl="/property" techStack="React JS" />
         </div>
+        {/* </div> */}
       </div>
     </div>
   );

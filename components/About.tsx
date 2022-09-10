@@ -42,7 +42,7 @@ const About: FC<AboutProps> = (props) => {
       <div className="z-50 p-12  h-full w-[70%] xl:h-[70%] overflow-hidden rounded-lg shadow-3xl dark:shadow-slate-900 bg-eggshell dark:bg-slate-800 md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
           <p className="text-xl text-black dark:text-slate-200 font-mono">
-            <span className="dark:text-brightBlue text-lightBlue">01.</span> About
+            <span className="dark:text-brightBlue text-lightBlue">02.</span> About
           </p>
           <p className="py-2 text-gray-600 dark:text-slate-400">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. A neque optio fugit dolores asperiores. Dolorem,

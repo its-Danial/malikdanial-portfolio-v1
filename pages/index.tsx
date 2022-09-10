@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import About from "../components/About";
+import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import MainIntro from "../components/MainIntro";
 import NavBar from "../components/NavBar";
@@ -10,7 +11,7 @@ import Skills from "../components/Skills";
 
 const Home: NextPage = () => {
   return (
-    <div className="relative flex flex-col min-h-screen">
+    <div className="relative  flex flex-col min-h-screen">
       <Head>
         <title>Danial | Software engineer</title>
         <meta name="description" content="Portfolio website for Malik Danial" />
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
         <About />
         <Skills />
         <Projects />
+        <Contact />
       </div>
 
       {/* Note: Fixed side contact items */}

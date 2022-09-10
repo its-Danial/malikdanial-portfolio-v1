@@ -102,7 +102,7 @@ const Skills: FC<SkillsProps> = (props) => {
   };
 
   return (
-    <div id="skills" className="relative w-full h-fit xl:h-screen z-40 ">
+    <div id="skills" className="relative w-full h-fit xl:h-screen z-40">
       {renderBackground()}
       <div className=" p-6 md:px-24 md:py-14 space-y-10">
         <h2 className=" font-mono text-center mx-auto text-2xl text-blue-800 dark:text-brightBlue">
