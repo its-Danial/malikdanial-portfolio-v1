@@ -17,3 +17,7 @@ npm run dev
 # or
 yarn dev
 ```
+
+### Note 🚨
+
+If you wish you use this project remember to give me credits.
