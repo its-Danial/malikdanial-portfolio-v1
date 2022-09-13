@@ -96,19 +96,20 @@ const MainIntro: FC<MainIntroProps> = (props) => {
               >
                 Malik Danial.
               </motion.h2>
-              <motion.div
+
+              <motion.h3
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ type: "spring", stiffness: 150, delay: 2, delayChildren: 0.1, staggerChildren: 0.1 }}
+                className="font-latoSans font-extrabold tracking-tight text-4xl md:text-5xl lg:text-6xl text-gray-400"
               >
-                <h3 className="font-latoSans font-extrabold tracking-tight text-4xl md:text-5xl lg:text-6xl text-gray-400">
-                  I{"'"}m a{" "}
-                  <TextTransition style={{ maxWidth: "95%" }} inline springConfig={presets.wobbly}>
-                    {TEXTS[index % TEXTS.length]}
-                  </TextTransition>
-                  .
-                </h3>
-              </motion.div>
+                I&apos;m a{" "}
+                <TextTransition inline springConfig={presets.wobbly} style={{ maxWidth: "75%" }}>
+                  {TEXTS[index % TEXTS.length]}
+                </TextTransition>
+                <span className="ml-1">.</span>
+              </motion.h3>
+
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -128,7 +129,7 @@ const MainIntro: FC<MainIntroProps> = (props) => {
             initial={{ opacity: 0, x: 200 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ type: "spring", stiffness: 150, delay: 0.5 }}
-            className="basis-[30%] md:basis-1/3 mx-auto md:flex"
+            className="basis-[30%] md:basis-[40%] mx-auto md:flex h-[300px] w-[300px] md:h-auto md:w-auto"
           >
             <Image src={memoji} width={400} height={400} alt="memoji" />
           </motion.div>
