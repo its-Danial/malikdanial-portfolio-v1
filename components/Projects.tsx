@@ -55,7 +55,7 @@ const Projects: FC<ProjectsProps> = (props) => {
     }
   };
   return (
-    <div id="projects" className="w-full min-h-screen h-full relative z-40 ">
+    <div id="projects" className="scroll-mt-5 w-full min-h-screen h-full relative z-40 ">
       {renderWave()}
       <div
         // overflow-y-auto

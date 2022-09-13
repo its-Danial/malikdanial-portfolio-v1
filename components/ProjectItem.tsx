@@ -13,7 +13,7 @@ type ProjectItemProps = {
 
 const ProjectItem: FC<ProjectItemProps> = (props) => {
   return (
-    <div className="bg-eggshell dark:bg-slate-900 flex flex-col rounded-lg shadow-3xl dark:shadow-slate-900">
+    <div className="bg-eggshell dark:bg-slate-900 flex flex-col rounded-lg shadow-3xl dark:border dark:border-slate-800">
       <Link href={props.projectUrl}>
         <div className="relative group cursor-pointer">
           <Image className="rounded-xl group-hover:opacity-30 " src={props.backgroundImg} alt="/" />

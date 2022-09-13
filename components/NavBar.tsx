@@ -123,7 +123,7 @@ const NavBar: FC<NavBarProps> = (props) => {
                     04. <span className="cursor-pointer text-eggshell hover:text-blue-300">Project</span>
                   </li>
                 </Link>
-                <Link href="/">
+                <Link href="/#contact">
                   <li className="text-sm text-brightBlue font-mono font-medium">
                     05. <span className="cursor-pointer text-eggshell hover:text-blue-300">Contact</span>
                   </li>
