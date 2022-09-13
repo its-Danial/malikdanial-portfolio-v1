@@ -2,7 +2,7 @@ import { FC, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import myImage from "../public/assets//images/me.jpg";
+import myImage from "../public/assets/images/me.jpg";
 
 type AboutProps = {};
 
