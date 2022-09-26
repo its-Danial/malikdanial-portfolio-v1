@@ -17,7 +17,7 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
     <div className="bg-eggshell  dark:bg-slate-900 flex flex-col rounded-lg shadow-3xl dark:border dark:border-slate-800">
       <Link href={props.projectUrl}>
         <div className="relative group cursor-pointer">
-          <Image className="rounded-xl group-hover:opacity-30 " src={props.coverImage} alt="/" />
+          <Image className="rounded-xl group-hover:opacity-20" src={props.coverImage} alt="/" />
           <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-lightBlue dark:text-brightBlue">
             <FaInfoCircle size={40} />
           </div>
