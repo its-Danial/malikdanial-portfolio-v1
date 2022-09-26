@@ -1,34 +1,34 @@
 import { FC, useEffect, useState } from "react";
 import Image from "next/image";
 //front-end Languages
-import tsLogo from "../public/assets/skills/front-end/typescript.svg";
-import jsLogo from "../public/assets/skills/front-end/javascript.svg";
-import htmlLogo from "../public/assets/skills/front-end/html.svg";
-import cssLogo from "../public/assets/skills/front-end/css.svg";
+import tsLogo from "../public/assets/skills-svg/front-end/typescript.svg";
+import jsLogo from "../public/assets/skills-svg/front-end/javascript.svg";
+import htmlLogo from "../public/assets/skills-svg/front-end/html.svg";
+import cssLogo from "../public/assets/skills-svg/front-end/css.svg";
 //front-end technologies
-import reactJsLogo from "../public/assets/skills/front-end/react.svg";
-import nextJsLogo from "../public/assets/skills/front-end/next-js.svg";
-import vueJsLogo from "../public/assets/skills/front-end/vue-js.svg";
-import reactNativeLogo from "../public/assets/skills/front-end/react-native.svg";
-import jqueryLogo from "../public/assets/skills/front-end/jquery.svg";
-import tailwindLogo from "../public/assets/skills/front-end/tailwindcss.svg";
-import materialUILog from "../public/assets/skills/front-end/material-ui.svg";
-import framerMotionLogo from "../public/assets/skills/front-end/framer-motion.svg";
-import bootstrapLogo from "../public/assets/skills/front-end/bootstrap.svg";
-import gitLogo from "../public/assets/skills/front-end/git.svg";
+import reactJsLogo from "../public/assets/skills-svg/front-end/react.svg";
+import nextJsLogo from "../public/assets/skills-svg/front-end/next-js.svg";
+import vueJsLogo from "../public/assets/skills-svg/front-end/vue-js.svg";
+import reactNativeLogo from "../public/assets/skills-svg/front-end/react-native.svg";
+import jqueryLogo from "../public/assets/skills-svg/front-end/jquery.svg";
+import tailwindLogo from "../public/assets/skills-svg/front-end/tailwindcss.svg";
+import materialUILog from "../public/assets/skills-svg/front-end/material-ui.svg";
+import framerMotionLogo from "../public/assets/skills-svg/front-end/framer-motion.svg";
+import bootstrapLogo from "../public/assets/skills-svg/front-end/bootstrap.svg";
+import gitLogo from "../public/assets/skills-svg/front-end/git.svg";
 //back-end languages
-import pythonLogo from "../public/assets/skills/back-end/python.svg";
-import javaLog from "../public/assets/skills/back-end/java.svg";
+import pythonLogo from "../public/assets/skills-svg/back-end/python.svg";
+import javaLog from "../public/assets/skills-svg/back-end/java.svg";
 //back-end
-import springLogo from "../public/assets/skills/back-end/spring.svg";
-import nodeLogo from "../public/assets/skills/back-end/nodejs.svg";
-import expressLogo from "../public/assets/skills/back-end/express.svg";
-import mongodbLog from "../public/assets/skills/back-end/mongodb.svg";
-import mysqlLogo from "../public/assets/skills/back-end/mysql.svg";
-import herokuLogo from "../public/assets/skills/back-end/heroku.svg";
-import dockerLogo from "../public/assets/skills/back-end/docker.svg";
-import tensorFlowLogo from "../public/assets/skills/back-end/tensorflow.svg";
-import firebaseLogo from "../public/assets/skills/front-end/firebase.svg";
+import springLogo from "../public/assets/skills-svg/back-end/spring.svg";
+import nodeLogo from "../public/assets/skills-svg/back-end/nodejs.svg";
+import expressLogo from "../public/assets/skills-svg/back-end/express.svg";
+import mongodbLog from "../public/assets/skills-svg/back-end/mongodb.svg";
+import mysqlLogo from "../public/assets/skills-svg/back-end/mysql.svg";
+import herokuLogo from "../public/assets/skills-svg/back-end/heroku.svg";
+import dockerLogo from "../public/assets/skills-svg/back-end/docker.svg";
+import tensorFlowLogo from "../public/assets/skills-svg/back-end/tensorflow.svg";
+import firebaseLogo from "../public/assets/skills-svg/front-end/firebase.svg";
 import { useTheme } from "next-themes";
 
 type SkillsProps = {};
