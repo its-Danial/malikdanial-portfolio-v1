@@ -9,6 +9,7 @@ import { FaFacebook, FaGithub, FaInstagramSquare, FaLinkedin } from "react-icons
 import { FiSun } from "react-icons/fi";
 import { RiMoonClearLine } from "react-icons/ri";
 import logo from "../public/assets/images/white-logo.png";
+import resumePDF from "../public/assets/pdf/resume.pdf";
 
 type NavBarProps = {};
 
@@ -87,6 +88,8 @@ const NavBar: FC<NavBarProps> = (props) => {
     }
   }, [lastScrollY]);
 
+  // Note: for downloading resume PDF
+
   return (
     // ${!show && "hidden ease-in duration-500"}
     <AnimatePresence>
@@ -129,9 +132,16 @@ const NavBar: FC<NavBarProps> = (props) => {
                   </li>
                 </Link>
 
-                <button className="px-4 py-[7px] text-base rounded-md border-2 border-brightBlue font-mono text-brightBlue/90 hover:bg-brightBlue/20 hover:scale-105 ease-in duration-200">
-                  Resume
-                </button>
+                <Link href="resume.pdf" passHref>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-[7px] text-base rounded-md border-2 border-brightBlue font-mono text-brightBlue/90 hover:bg-brightBlue/20 hover:scale-105 ease-in duration-200"
+                  >
+                    Resume
+                  </a>
+                </Link>
+
                 <div>{renderThemeChanger()}</div>
               </ul>
             </div>
@@ -190,9 +200,15 @@ const NavBar: FC<NavBarProps> = (props) => {
                           04. <span className="cursor-pointer text-gray-600 hover:text-nextBlue text-lg">Contact</span>
                         </li>
                       </Link>
-                      <button className="px-7 py-3 rounded-md border-2 border-blue-600 font-mono text-blue-600 hover:bg-blue-600/5 hover:scale-105 ease-in duration-200">
-                        Resume
-                      </button>
+                      <div>
+                        <Link href="resume.pdf">
+                          <a target="_blank" rel="noopener noreferrer">
+                            <button className="px-7 py-3 rounded-md border-2 border-blue-600 font-mono text-blue-600 hover:bg-blue-600/5 hover:scale-105 ease-in duration-200">
+                              Resume
+                            </button>
+                          </a>
+                        </Link>
+                      </div>
                     </ul>
                     <div className="flex flex-row justify-between items-center px-0 sm:px-6">
                       <div className="rounded-full cursor-pointer hover:scale-125 ease-in duration-200 hover:text-blue-600">

@@ -20,7 +20,7 @@ const Home: NextPage = () => {
       <NavBar />
 
       {/* Note: content */}
-      <div className="flex-grow ">
+      <div className="flex-grow">
         <MainIntro />
         <About />
         <Skills />
