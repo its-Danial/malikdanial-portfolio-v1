@@ -65,8 +65,9 @@ const About: FC<AboutProps> = (props) => {
             </p>
           </Link>
         </div>
-        <div className="w-full h-auto m-auto rounded-lg flex items-center justify-center p-2">
+        <div className="relative w-full h-auto m-auto rounded-lg flex items-center justify-center p-2">
           <Image src={myImage} height={560} width={450} className="rounded-md" alt="/" />
+          <div className="bottom-0 absolute h-28 w-full bg-gradient-to-b from-white/0 to-white/100 dark:from-slate-800/0 dark:to-slate-800/100" />
         </div>
       </div>
     </div>

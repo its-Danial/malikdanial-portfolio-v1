@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { FC } from "react";
-import { AiFillWechat } from "react-icons/ai";
 import { BsWhatsapp } from "react-icons/bs";
 import { FaGithub, FaLinkedin, FaInstagramSquare, FaFacebook } from "react-icons/fa";
 

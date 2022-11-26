@@ -4,6 +4,7 @@ type ContactInputProps = {
   label: string;
   placeholder: string;
   type: string;
+  name: string;
 };
 
 const ContactInput: FC<ContactInputProps> = (props) => {
@@ -13,12 +14,14 @@ const ContactInput: FC<ContactInputProps> = (props) => {
         <input
           type="text"
           id="floating_outlined"
+          name={props.name}
           className="block px-6 py-5 text-lg w-full text-md text-gray-600 bg-transparent rounded-lg border border-gray-300 appearance-none dark:text-gray-200 dark:border-gray-600 dark:focus:border-brightBlue focus:outline-none focus:ring-1 focus:border-blue-600 peer"
           placeholder={props.placeholder}
         />
       ) : (
         <textarea
           id="floating_outlined"
+          name={props.name}
           rows={6}
           className="block resize-none px-6 py-5 text-lg w-full text-md text-gray-600 bg-transparent rounded-lg border border-gray-300 appearance-none dark:text-gray-200 dark:border-gray-600 dark:focus:border-brightBlue focus:outline-none focus:ring-1 focus:border-blue-600 peer"
           placeholder={props.placeholder}

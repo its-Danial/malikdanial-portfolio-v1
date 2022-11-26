@@ -28,7 +28,7 @@ const Home: NextPage = () => {
         <Contact />
       </div>
 
-      {/* Note: Fixed side contact items */}
+      {/* TODO: Fixed side contact items */}
       <SideContactItems />
       <Footer />
     </div>

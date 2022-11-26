@@ -152,7 +152,7 @@ const NavBar: FC<NavBarProps> = (props) => {
             >
               <BiMenuAltRight
                 size={40}
-                className={`text-blue-300 ${spinIcon ? "animate-spin" : ""} ${
+                className={`text-blue-300 ${spinIcon ? "animate-spin-linear" : ""} ${
                   spinReserve ? "animate-reverse-spin" : ""
                 }`}
               />
@@ -173,7 +173,7 @@ const NavBar: FC<NavBarProps> = (props) => {
                   onClick={onNavDrawerCloseHandler}
                   className="rounded-full  p-1  hover:bg-blue-300/10 cursor-pointer"
                 >
-                  <AiOutlineClose size={40} className={`text-blue-300 ${spinIcon ? "animate-spin" : ""}`} />
+                  <AiOutlineClose size={40} className={`text-blue-300 ${spinIcon ? "animate-spin-linear" : ""}`} />
                 </div>
               </div>
               <div className="px-5 pt-2 h-[80%]">

@@ -17,7 +17,7 @@ module.exports = {
         lightBlue: "#4083f2",
       },
       animation: {
-        spin: "spin 0.5s linear",
+        "spin-linear": "spin 0.5s linear",
         "reverse-spin": "reverse-spin 0.5s linear",
       },
       keyframes: {

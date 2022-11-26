@@ -34,7 +34,7 @@ const MainIntro: FC<MainIntroProps> = (props) => {
           options={{
             height: 20,
             amplitude: 45,
-            soints: 5,
+            points: 3,
           }}
         />
       );
@@ -49,7 +49,7 @@ const MainIntro: FC<MainIntroProps> = (props) => {
           options={{
             height: 20,
             amplitude: 45,
-            soints: 5,
+            points: 3,
           }}
         />
       );
