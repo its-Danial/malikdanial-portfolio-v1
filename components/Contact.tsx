@@ -50,7 +50,7 @@ const Contact: FC<ContactProps> = (props) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowAlert(false);
-    }, 6000);
+    }, 4500);
     return () => clearTimeout(timer);
   }, [showAlert]);
 

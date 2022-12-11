@@ -57,7 +57,7 @@ const MainIntro: FC<MainIntroProps> = (props) => {
   };
 
   // Note: text animation
-  const TEXTS = ["software engineer 💻", "cat owner 🐈", "traveler 🌎", "polyglot 🗣", "software engineer 💻"];
+  const TEXTS = ["software engineer 💻", "traveler 🌎", "cat owner 🐈", "polyglot 🗣", "software engineer 💻"];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -103,7 +103,7 @@ const MainIntro: FC<MainIntroProps> = (props) => {
                 transition={{ type: "spring", stiffness: 150, delay: 2, delayChildren: 0.1, staggerChildren: 0.1 }}
                 className="font-latoSans font-extrabold tracking-tight text-4xl md:text-5xl lg:text-6xl text-gray-400"
               >
-                I&apos;m a{" "}
+                A{" "}
                 <TextTransition inline springConfig={presets.wobbly} style={{ maxWidth: "75%" }}>
                   {TEXTS[index % TEXTS.length]}
                 </TextTransition>
@@ -114,12 +114,15 @@ const MainIntro: FC<MainIntroProps> = (props) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 3, duration: 0.8 }}
-                className="w-[95%] sm:max-w-lg"
+                className="w-[95%] sm:max-w-xl"
               >
                 <p className="font-latoSans tracking-tight text-sm md:text-lg text-gray-400">
-                  Im a software engineer student, currently studying in China Lorem ipsum dolor sit amet consectetur,
-                  adipisicing elit. Est aliquid placeat vel voluptate voluptatum quas consequatur delectus commodi esse
-                  ex unde debitis quisquam in eum laboriosam quidem numquam, quis expedita!
+                  I&apos;m an international Software Engineering student in China. About to graduate and looking for new
+                  and interesting opportunities which can help me grow as an engineer. I work on personal projects using{" "}
+                  <strong className="text-gray-300">React.js/Next.js</strong> with{" "}
+                  <strong className="text-gray-300">Typescript</strong> and{" "}
+                  <strong className="text-gray-300">Java Spring</strong> in my spare time. Recently I&apos;ve been
+                  playing around with IOS development, machine learning and AI.
                 </p>
               </motion.div>
             </div>

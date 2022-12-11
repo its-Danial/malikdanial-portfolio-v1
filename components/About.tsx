@@ -45,23 +45,22 @@ const About: FC<AboutProps> = (props) => {
             <span className="dark:text-brightBlue text-lightBlue">02.</span> About
           </p>
           <p className="py-2 text-gray-600 dark:text-slate-400">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A neque optio fugit dolores asperiores. Dolorem,
-            est? Reprehenderit nemo ad cum fuga natus quia error distinctio, eveniet ipsum repellat minima? Explicabo.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laudantium, mollitia quod in magni quas
-            suscipit quia accusantium eligendi repellendus perferendis blanditiis fugit unde, deleniti asperiores at
-            beatae? Voluptatem, ipsum.
+            My family got its first computer when I was 9 and I remember falling in love with the machine instantly.
+            Computers can be a source of knowledge, a form of entertainment, a problem‐solving machine and so much
+            more,all possible through a unique arrangement of ones and zeros. We now live in a tech‐savvy era where
+            everything from how we pay for our food and how we use transportation depends on computers in one way or the
+            other. Despite all the amazing achievements in the field of software engineering I am convinced there are
+            many more possibilities for its application and so much more to discover.
           </p>
           <p className="py-2 text-gray-600 dark:text-slate-400">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A neque optio fugit dolores asperiores. Dolorem,
-            est? Reprehenderit nemo ad cum fuga natus quia error distinctio, eveniet ipsum repellat minima? Explicabo.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laudantium, mollitia quod in magni quas
-            suscipit quia accusantium eligendi repellendus perferendis blanditiis fugit unde, deleniti asperiores at
-            beatae? Voluptatem, ipsum.
+            I am someone who wants to be a part of this process of exploration, discovery, and invention. That is why I
+            have dedicated my entire education to this field. I am deeply passionate about software engineering and
+            working towards making many of its applications possible.
           </p>
 
           <Link href="/#projects">
             <p className="py-2 text-gray-700 dark:text-slate-300 underline cursor-pointer">
-              Check out some of my latest projects.
+              Have a look at some of the things I&apos;ve recently built
             </p>
           </Link>
         </div>
