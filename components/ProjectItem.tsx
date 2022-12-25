@@ -3,19 +3,12 @@ import Image, { StaticImageData } from "next/image";
 import { FC } from "react";
 import { FaGithub, FaInfoCircle } from "react-icons/fa";
 import { HiOutlineExternalLink } from "react-icons/hi";
+import { Project } from "../static/projects";
 
-type ProjectItemProps = {
-  coverImage: StaticImageData;
-  title: string;
-  techStack: string[];
-  projectUrl: string;
-  gitHubUrl?: string;
-};
-
-const ProjectItem: FC<ProjectItemProps> = (props) => {
+const ProjectItem: FC<Project> = (props) => {
   return (
     <div className="bg-eggshell  dark:bg-slate-900 flex flex-col rounded-lg shadow-3xl dark:border dark:border-slate-800">
-      <Link href={props.projectUrl}>
+      <Link href={props.projectUrl ? props.projectUrl : ""}>
         <div className="relative group cursor-pointer">
           <Image className="rounded-xl group-hover:opacity-20" src={props.coverImage} alt="/" />
           <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-lightBlue dark:text-brightBlue">
@@ -23,6 +16,7 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
           </div>
         </div>
       </Link>
+
       <div className="px-4 pb-2 space-y-2">
         <div className="flex flex-row justify-between">
           <div className="flex flex-row space-x-3 items-center">
@@ -43,9 +37,7 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
             </Link>
           )}
         </div>
-        <p className="text-xs dark:text-gray-300">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ipsam a excepturi voluptatem ratione tenetur
-        </p>
+        <p className="text-xs dark:text-gray-300">{props.summary}</p>
         <div className="flex flex-row space-x-4 overflow-hidden">
           {props.techStack.map((name, index) => (
             <p key={name} className={index >= 4 ? "hidden" : "text-xs font-mono text-gray-600 dark:text-gray-400"}>

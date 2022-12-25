@@ -7,7 +7,7 @@ import expenseTrackerCover from "../public/assets/projects/expense-tracker/landi
 import taskOrganizerCover from "../public/assets/projects/task-organizer/landing-page.png";
 import pennyJuiceCover from "../public/assets/projects/penny-juice/landing-page.png";
 
-type Project = {
+export type Project = {
   id: string;
   title: string;
   coverImage: StaticImageData;
@@ -15,7 +15,7 @@ type Project = {
   description: string;
   summary: string;
   gitHubUrl?: string;
-  projectWebsite?: string;
+  projectUrl?: string;
 };
 export const projects: Project[] = [
   {
@@ -37,21 +37,19 @@ export const projects: Project[] = [
     ],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    summary:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    summary: "An E-learning platform similar to Udemy",
     gitHubUrl: "https://github.com/its-Danial/webacademy",
   },
   {
     id: "p2",
     title: "WatchedThis: Movie/Tv Show Tracker",
-      coverImage: watchedThisCover,
+    coverImage: watchedThisCover,
     techStack: ["NextJS+TS", "OAuth", "MongoDB", "TMDB API", "Framer Motion"],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    summary:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    summary: "A Website to search popular and trending movies and track when new episodes are released",
     gitHubUrl: "https://github.com/its-Danial/watched-this",
-    projectWebsite: "https://watched-this.vercel.app",
+    projectUrl: "https://watched-this.vercel.app",
   },
   {
     id: "p3",
@@ -106,7 +104,7 @@ export const projects: Project[] = [
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     gitHubUrl: "https://github.com/its-Danial/penny-juice-redesign",
-    projectWebsite: "https://penny-juice-redesign.vercel.app/",
+    projectUrl: "https://penny-juice-redesign.vercel.app/",
   },
   {
     id: "p7",
@@ -117,6 +115,6 @@ export const projects: Project[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    projectWebsite: "https://murmuring-mountain-35046.herokuapp.com/",
+    projectUrl: "https://murmuring-mountain-35046.herokuapp.com/",
   },
 ];

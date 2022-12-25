@@ -59,16 +59,7 @@ const Projects: FC<ProjectsProps> = (props) => {
 
   const projectView = projects.map((project, index) => {
     if (index >= 6) return;
-    return (
-      <ProjectItem
-        key={project.id}
-        title={project.title}
-        coverImage={project.coverImage}
-        projectUrl={`/${project.id}`}
-        techStack={project.techStack}
-        gitHubUrl={project.gitHubUrl}
-      />
-    );
+    return <ProjectItem key={project.id} {...project} />;
   });
 
   return (
