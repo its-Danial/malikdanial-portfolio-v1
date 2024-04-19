@@ -8,7 +8,8 @@ type SideContactItemsProps = {};
 const SideContactItems: FC<SideContactItemsProps> = (props) => {
   return (
     <>
-      <ul className=" fixed mx-8 bottom-0 left-0 text-gray-500 dark:text-brightBlue hidden  md:flex flex-col justify-between items-center w-auto h-80 z-50">
+      {/* Note: Left */}
+      <ul className=" fixed mx-8 bottom-0 left-0 text-gray-500 dark:text-brightBlue hidden  md:flex flex-col justify-between items-center w-auto h-[17rem] z-50">
         <div className="flex space-y-5 flex-col items-center">
           <Link href="https://github.com/its-Danial" passHref>
             <a target="_blank" rel="noopener noreferrer">
@@ -17,13 +18,13 @@ const SideContactItems: FC<SideContactItemsProps> = (props) => {
               </li>
             </a>
           </Link>
-          <Link href="https://wa.me/8618240333193" passHref>
+          {/* <Link href="https://wa.me/8618240333193" passHref>
             <a target="_blank" rel="noopener noreferrer">
               <li className="hover:scale-125 hover:text-gray-300 cursor-pointer">
                 <BsWhatsapp size={25} />
               </li>
             </a>
-          </Link>
+          </Link> */}
           <Link href="https://www.linkedin.com/in/malik-danial-azhar/" passHref>
             <a target="_blank" rel="noopener noreferrer">
               <li className="hover:scale-125 hover:text-gray-300 cursor-pointer">
@@ -49,6 +50,7 @@ const SideContactItems: FC<SideContactItemsProps> = (props) => {
 
         <li className="h-24 border border-gray-400"></li>
       </ul>
+      {/* Note: Right */}
       <ul className="fixed mx-8 bottom-0 right-0 text-gray-500 dark:text-brightBlue hidden  md:flex flex-col justify-between items-center w-7 h-64 z-50">
         <Link href="mailto:itsmalikdanial@gmail.com">
           <a>

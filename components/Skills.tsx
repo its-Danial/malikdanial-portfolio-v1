@@ -37,14 +37,14 @@ const Skills: FC<SkillsProps> = (props) => {
   const frontEndLanguages = [
     { logo: tsLogo, name: "Typescript", level: "Intermediate" },
     { logo: jsLogo, name: "JavaScript", level: "Skilled" },
-    { logo: htmlLogo, name: "HTML 5", level: "Intermediate" },
-    { logo: cssLogo, name: "CSS", level: "Intermediate" },
+    // { logo: htmlLogo, name: "HTML 5", level: "Intermediate" },
+    // { logo: cssLogo, name: "CSS", level: "Intermediate" },
   ];
 
   const frontEndTechnologies = [
     { logo: reactJsLogo, name: "React JS", level: "Skilled" },
     { logo: nextJsLogo, name: "Next JS", level: "Intermediate" },
-    { logo: vueJsLogo, name: "Vue JS", level: "Beginner" },
+    { logo: vueJsLogo, name: "Vue JS", level: "Skilled" },
     { logo: reactNativeLogo, name: "React Native", level: "Beginner" },
     { logo: jqueryLogo, name: "jQuery", level: "Intermediate" },
     { logo: tailwindLogo, name: "Tailwind CSS", level: "Skilled" },
@@ -61,7 +61,7 @@ const Skills: FC<SkillsProps> = (props) => {
   ];
 
   const backEndTechnologies = [
-    { logo: springLogo, name: "Spring Boot & Spring Cloud", level: "Intermediate" },
+    { logo: springLogo, name: "Spring Framework", level: "Intermediate" },
     { logo: nodeLogo, name: "Node JS", level: "Intermediate" },
     { logo: expressLogo, name: "Express JS", level: "Intermediate" },
     { logo: mongodbLog, name: "MongoDB", level: "Intermediate" },
@@ -109,6 +109,7 @@ const Skills: FC<SkillsProps> = (props) => {
           03. <span className="text-gray-700 dark:text-slate-200">Skills & Technologies</span>
         </h2>
         <div className="z-50 w-full h-[90%] my-auto flex flex-col xl:flex-row space-y-3 xl:space-y-0 xl:space-x-9">
+          {/* Note: Front-end */}
           <div className="flex-1 bg-eggshell dark:bg-slate-800 shadow-3xl rounded-lg p-6">
             <div className="h-full w-full">
               <h4 className="text-gray-600 dark:text-sky-300 text-xl text-center">Front-end Development</h4>
@@ -141,7 +142,7 @@ const Skills: FC<SkillsProps> = (props) => {
             </div>
           </div>
 
-          {/* Note */}
+          {/* Note: Backend */}
           <div className="flex-1 bg-eggshell dark:bg-slate-800 shadow-3xl rounded-lg p-6">
             <div className="h-full w-full">
               <h4 className="text-gray-600 dark:text-sky-300 text-xl text-center">Back-end Development</h4>

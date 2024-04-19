@@ -117,9 +117,10 @@ const MainIntro: FC<MainIntroProps> = (props) => {
                 className="w-[95%] sm:max-w-xl"
               >
                 <p className="font-latoSans tracking-tight text-sm md:text-lg text-gray-400">
-                  I&apos;m an international Software Engineering student in China. About to graduate and looking for new
-                  and interesting opportunities which can help me grow as an engineer. I work on personal projects using{" "}
-                  <strong className="text-gray-300">React.js/Next.js</strong> with{" "}
+                  Currently employed at Bayt.com, specializing in front‐end development. Actively leading project
+                  migrations to the latest technologies, designing and maintaining an custom web components widget for
+                  seamless third party integration, and prioritizing application performance optimization. I work on
+                  personal projects using <strong className="text-gray-300">React.js/Next.js</strong> with{" "}
                   <strong className="text-gray-300">Typescript</strong> and{" "}
                   <strong className="text-gray-300">Java Spring</strong> in my spare time. Recently I&apos;ve been
                   playing around with IOS development, machine learning and AI.

@@ -40,7 +40,7 @@ const Projects: FC<ProjectsProps> = (props) => {
     } else {
       return (
         <Wave
-          className="h-[85vh] m-0 rotate-180 z-[-100]"
+          className="h-[85vh] m-0 -mt-1 rotate-180 z-[-100]"
           // #F8F0E3
           // @ts-ignore
           fill="#1e40af"
