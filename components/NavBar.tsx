@@ -5,7 +5,12 @@ import Link from "next/link";
 import { FC, useEffect, useState } from "react";
 import { AiFillWechat, AiOutlineClose } from "react-icons/ai";
 import { BiMenuAltRight } from "react-icons/bi";
-import { FaFacebook, FaGithub, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaGithub,
+  FaInstagramSquare,
+  FaLinkedin,
+} from "react-icons/fa";
 import { FiSun } from "react-icons/fi";
 import { RiMoonClearLine } from "react-icons/ri";
 import logo from "../public/assets/images/white-logo.png";
@@ -44,13 +49,19 @@ const NavBar: FC<NavBarProps> = (props) => {
 
     if (currentTheme === "dark") {
       return (
-        <button onClick={() => setTheme("light")} className="p-3 rounded-md bg-brightBlue/10 hover:bg-brightBlue/20">
+        <button
+          onClick={() => setTheme("light")}
+          className="rounded-md bg-brightBlue/10 p-3 hover:bg-brightBlue/20"
+        >
           <RiMoonClearLine size={20} className="text-brightBlue" />
         </button>
       );
     } else {
       return (
-        <button onClick={() => setTheme("dark")} className="p-3 rounded-md bg-brightBlue/10 hover:bg-brightBlue/20">
+        <button
+          onClick={() => setTheme("dark")}
+          className="rounded-md bg-brightBlue/10 p-3 hover:bg-brightBlue/20"
+        >
           <FiSun size={20} className="text-brightBlue" />
         </button>
       );
@@ -97,38 +108,59 @@ const NavBar: FC<NavBarProps> = (props) => {
         <motion.div
           initial={{ height: 0 }}
           animate={{ height: 96, transition: { duration: 0.5 } }}
-          className={`fixed bg-blue-800 dark:bg-slate-800 w-full z-50`}
+          className={`fixed z-50 w-full bg-blue-800 dark:bg-slate-800`}
           exit={{ height: 0, transition: { duration: 0.3 } }}
         >
-          <div className="flex justify-between items-center w-full h-full px-4 lg:pl-8 lg:pr-10  2xl:px-16">
-            <Image className="rounded-full" src={logo} width={65} height={65} alt="Malik Danial's logo" />
+          <div className="flex h-full w-full items-center justify-between px-4 lg:pl-8 lg:pr-10  2xl:px-16">
+            <Image
+              className="rounded-full"
+              src={logo}
+              width={65}
+              height={65}
+              alt="Malik Danial's logo"
+            />
 
             {/* Large screen layout */}
             <div>
-              <ul className="hidden md:flex items-center space-x-6">
+              <ul className="hidden items-center space-x-6 md:flex">
                 <Link href="/">
-                  <li className="text-sm  text-brightBlue font-mono font-medium">
-                    01. <span className="cursor-pointer text-eggshell hover:text-blue-300">Home</span>
+                  <li className="font-mono  text-sm font-medium text-brightBlue">
+                    01.{" "}
+                    <span className="cursor-pointer text-eggshell hover:text-blue-300">
+                      Home
+                    </span>
                   </li>
                 </Link>
                 <Link href="/#about">
-                  <li className="text-sm  text-brightBlue font-mono font-medium">
-                    02. <span className="cursor-pointer text-eggshell hover:text-blue-300">About</span>
+                  <li className="font-mono  text-sm font-medium text-brightBlue">
+                    02.{" "}
+                    <span className="cursor-pointer text-eggshell hover:text-blue-300">
+                      About
+                    </span>
                   </li>
                 </Link>
                 <Link href="/#skills">
-                  <li className="text-sm text-brightBlue font-mono font-medium">
-                    03. <span className="cursor-pointer text-eggshell hover:text-blue-300">Skill</span>
+                  <li className="font-mono text-sm font-medium text-brightBlue">
+                    03.{" "}
+                    <span className="cursor-pointer text-eggshell hover:text-blue-300">
+                      Skill
+                    </span>
                   </li>
                 </Link>
                 <Link href="/#projects">
-                  <li className="text-sm text-brightBlue font-mono font-medium">
-                    04. <span className="cursor-pointer text-eggshell hover:text-blue-300">Project</span>
+                  <li className="font-mono text-sm font-medium text-brightBlue">
+                    04.{" "}
+                    <span className="cursor-pointer text-eggshell hover:text-blue-300">
+                      Project
+                    </span>
                   </li>
                 </Link>
                 <Link href="/#contact">
-                  <li className="text-sm text-brightBlue font-mono font-medium">
-                    05. <span className="cursor-pointer text-eggshell hover:text-blue-300">Contact</span>
+                  <li className="font-mono text-sm font-medium text-brightBlue">
+                    05.{" "}
+                    <span className="cursor-pointer text-eggshell hover:text-blue-300">
+                      Contact
+                    </span>
                   </li>
                 </Link>
 
@@ -136,7 +168,7 @@ const NavBar: FC<NavBarProps> = (props) => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-[7px] text-base rounded-md border-2 border-brightBlue font-mono text-brightBlue/90 hover:bg-brightBlue/20 hover:scale-105 ease-in duration-200"
+                    className="rounded-md border-2 border-brightBlue px-4 py-[7px] font-mono text-base text-brightBlue/90 duration-200 ease-in hover:scale-105 hover:bg-brightBlue/20"
                   >
                     Resume
                   </a>
@@ -148,7 +180,7 @@ const NavBar: FC<NavBarProps> = (props) => {
             {/* Mobile screen layout menu icon */}
             <div
               onClick={onNavDrawerOpenHandler}
-              className="md:hidden rounded-full p-1 hover:bg-blue-300/10 cursor-pointer"
+              className="cursor-pointer rounded-full p-1 hover:bg-blue-300/10 md:hidden"
             >
               <BiMenuAltRight
                 size={40}
@@ -159,72 +191,93 @@ const NavBar: FC<NavBarProps> = (props) => {
             </div>
           </div>
           {/* Back drop */}
-          <div className={showSideDrawer ? "md:hidden fixed left-0 top-0 h-screen w-full bg-black/30" : ""}>
+          <div
+            className={
+              showSideDrawer
+                ? "fixed left-0 top-0 h-screen w-full bg-black/30 md:hidden"
+                : ""
+            }
+          >
             {/* Side Drawer */}
             <div
               className={
                 showSideDrawer
-                  ? "fixed right-0 top-0 h-screen w-[65%] sm:w-[55%] md:w-[45%] bg-eggshell  duration-[230ms] "
-                  : "fixed right-[-100%] top-0  ease-in duration-500"
+                  ? "fixed right-0 top-0 h-screen w-[65%] bg-eggshell duration-[230ms] sm:w-[55%]  md:w-[45%] "
+                  : "fixed right-[-100%] top-0  duration-500 ease-in"
               }
             >
               <div className="flex h-20 items-center justify-end px-2">
                 <div
                   onClick={onNavDrawerCloseHandler}
-                  className="rounded-full  p-1  hover:bg-blue-300/10 cursor-pointer"
+                  className="cursor-pointer  rounded-full  p-1 hover:bg-blue-300/10"
                 >
-                  <AiOutlineClose size={40} className={`text-blue-300 ${spinIcon ? "animate-spin-linear" : ""}`} />
+                  <AiOutlineClose
+                    size={40}
+                    className={`text-blue-300 ${spinIcon ? "animate-spin-linear" : ""}`}
+                  />
                 </div>
               </div>
-              <div className="px-5 pt-2 h-[80%]">
-                <div className="border-t border-gray-300 h-full">
-                  <div className="p-5 text-center flex flex-col h-full justify-center space-y-36">
+              <div className="h-[80%] px-5 pt-2">
+                <div className="h-full border-t border-gray-300">
+                  <div className="flex h-full flex-col justify-center space-y-36 p-5 text-center">
                     <ul className="space-y-8">
                       <Link href="/">
-                        <li className=" text-base font-mono flex flex-col text-nextBlue">
-                          01. <span className="cursor-pointer text-gray-600 hover:text-nextBlue text-lg">Home</span>
+                        <li className=" flex flex-col font-mono text-base text-nextBlue">
+                          01.{" "}
+                          <span className="cursor-pointer text-lg text-gray-600 hover:text-nextBlue">
+                            Home
+                          </span>
                         </li>
                       </Link>
                       <Link href="/">
-                        <li className=" text-sm font-mono flex flex-col text-nextBlue">
-                          02. <span className="cursor-pointer text-gray-600 hover:text-nextBlue text-lg">About</span>
+                        <li className=" flex flex-col font-mono text-sm text-nextBlue">
+                          02.{" "}
+                          <span className="cursor-pointer text-lg text-gray-600 hover:text-nextBlue">
+                            About
+                          </span>
                         </li>
                       </Link>
                       <Link href="/">
-                        <li className=" text-sm font-mono flex flex-col text-nextBlue">
-                          03. <span className="cursor-pointer text-gray-600 hover:text-nextBlue text-lg">Skills</span>
+                        <li className=" flex flex-col font-mono text-sm text-nextBlue">
+                          03.{" "}
+                          <span className="cursor-pointer text-lg text-gray-600 hover:text-nextBlue">
+                            Skills
+                          </span>
                         </li>
                       </Link>
                       <Link href="/">
-                        <li className="text-sm font-mono flex flex-col text-nextBlue">
-                          04. <span className="cursor-pointer text-gray-600 hover:text-nextBlue text-lg">Contact</span>
+                        <li className="flex flex-col font-mono text-sm text-nextBlue">
+                          04.{" "}
+                          <span className="cursor-pointer text-lg text-gray-600 hover:text-nextBlue">
+                            Contact
+                          </span>
                         </li>
                       </Link>
                       <div>
                         <Link href="resume.pdf">
                           <a target="_blank" rel="noopener noreferrer">
-                            <button className="px-7 py-3 rounded-md border-2 border-blue-600 font-mono text-blue-600 hover:bg-blue-600/5 hover:scale-105 ease-in duration-200">
+                            <button className="rounded-md border-2 border-blue-600 px-7 py-3 font-mono text-blue-600 duration-200 ease-in hover:scale-105 hover:bg-blue-600/5">
                               Resume
                             </button>
                           </a>
                         </Link>
                       </div>
                     </ul>
-                    <div className="flex flex-row justify-between items-center px-0 sm:px-6">
-                      <div className="rounded-full cursor-pointer hover:scale-125 ease-in duration-200 hover:text-blue-600">
+                    <div className="flex flex-row items-center justify-between px-0 sm:px-6">
+                      <div className="cursor-pointer rounded-full duration-200 ease-in hover:scale-125 hover:text-blue-600">
                         <FaGithub size={30} />
                       </div>
-                      <div className="rounded-full cursor-pointer hover:scale-125 ease-in duration-200 hover:text-blue-600">
+                      <div className="cursor-pointer rounded-full duration-200 ease-in hover:scale-125 hover:text-blue-600">
                         <AiFillWechat size={35} />
                       </div>
-                      <div className="rounded-full cursor-pointer hover:scale-125 ease-in duration-200 hover:text-blue-600">
+                      <div className="cursor-pointer rounded-full duration-200 ease-in hover:scale-125 hover:text-blue-600">
                         <FaLinkedin size={30} />
                       </div>
-                      <div className="rounded-full cursor-pointer hover:scale-125 ease-in duration-200 hover:text-blue-600">
+                      <div className="cursor-pointer rounded-full duration-200 ease-in hover:scale-125 hover:text-blue-600">
                         <FaFacebook size={30} />
                       </div>
 
-                      <div className="rounded-full cursor-pointer hover:scale-125 ease-in duration-200 hover:text-blue-600">
+                      <div className="cursor-pointer rounded-full duration-200 ease-in hover:scale-125 hover:text-blue-600">
                         <FaInstagramSquare size={30} />
                       </div>
                     </div>

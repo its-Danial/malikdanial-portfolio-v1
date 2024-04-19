@@ -55,12 +55,18 @@ const Contact: FC<ContactProps> = (props) => {
   }, [showAlert]);
 
   return (
-    <div id="contact" className="w-full min-h-screen h-full relative z-40 mt-12 sm:mt-5">
-      <div className="p-6 md:px-24 md:py-14 space-y-10">
-        <h2 className=" font-mono text-center mx-auto text-2xl text-blue-800 dark:text-brightBlue">
-          05. <span className="text-gray-700 dark:text-slate-200">What&apos;s next?</span>
+    <div
+      id="contact"
+      className="relative z-40 mt-12 h-full min-h-screen w-full sm:mt-5"
+    >
+      <div className="space-y-10 p-6 md:px-24 md:py-14">
+        <h2 className=" mx-auto text-center font-mono text-2xl text-blue-800 dark:text-brightBlue">
+          05.{" "}
+          <span className="text-gray-700 dark:text-slate-200">
+            What&apos;s next?
+          </span>
         </h2>
-        <div className="flex flex-col md:flex-row justify-around">
+        <div className="flex flex-col justify-around md:flex-row">
           {/* Note: Cards */}
           {/* <div className="flex flex-col mt-6 w-full md:w-[28%]">
             <h3 className="text-center text-lg mb-6 dark:text-brightBlue">Contact me on</h3>
@@ -86,18 +92,38 @@ const Contact: FC<ContactProps> = (props) => {
             </div>
           </div> */}
           {/* Note: Text */}
-          <div className="flex flex-col mt-6 w-full md:w-[40%]">
-            <h3 className="text-center text-lg mb-6 dark:text-brightBlue">Write to me</h3>
-            <form onSubmit={contactFormSubmitHandler} className="flex flex-col space-y-14">
-              <ContactInput type="text" label="Name" name="user_name" placeholder="Enter your name" />
-              <ContactInput type="text" label="Email" name="user_email" placeholder="Enter your email" />
-              <ContactInput type="textarea" label="Message" name="message" placeholder="Enter your message" />
-              <div className="w-full flex justify-center">
+          <div className="mt-6 flex w-full flex-col md:w-[40%]">
+            <h3 className="mb-6 text-center text-lg dark:text-brightBlue">
+              Write to me
+            </h3>
+            <form
+              onSubmit={contactFormSubmitHandler}
+              className="flex flex-col space-y-14"
+            >
+              <ContactInput
+                type="text"
+                label="Name"
+                name="user_name"
+                placeholder="Enter your name"
+              />
+              <ContactInput
+                type="text"
+                label="Email"
+                name="user_email"
+                placeholder="Enter your email"
+              />
+              <ContactInput
+                type="textarea"
+                label="Message"
+                name="message"
+                placeholder="Enter your message"
+              />
+              <div className="flex w-full justify-center">
                 <button
                   disabled={isSending}
                   type="submit"
                   value="Send"
-                  className={`md:w-1/2 flex flex-row gap-3 items-center justify-center px-4 py-2.5 text-base rounded-md border-2 border-blue-600 dark:border-brightBlue font-mono text-blue-600 dark:text-brightBlue/90 dark:hover:bg-brightBlue/20 hover:bg-blue-600/10 ${
+                  className={`flex flex-row items-center justify-center gap-3 rounded-md border-2 border-blue-600 px-4 py-2.5 font-mono text-base text-blue-600 hover:bg-blue-600/10 dark:border-brightBlue dark:text-brightBlue/90 dark:hover:bg-brightBlue/20 md:w-1/2 ${
                     isSending && "opacity-50"
                   }`}
                 >
@@ -107,7 +133,7 @@ const Contact: FC<ContactProps> = (props) => {
                   ) : (
                     <svg
                       aria-hidden="true"
-                      className="mr-2 w-[23px] h-[23px] text-gray-200 animate-spin dark:text-gray-600 fill-blue-600 dark:fill-brightBlue"
+                      className="mr-2 h-[23px] w-[23px] animate-spin fill-blue-600 text-gray-200 dark:fill-brightBlue dark:text-gray-600"
                       viewBox="0 0 100 101"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"

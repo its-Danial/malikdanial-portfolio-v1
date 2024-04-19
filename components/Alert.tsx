@@ -10,8 +10,10 @@ const Alert: FC<AlertProps> = (props) => {
       initial={{ opacity: 0, x: 200 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ type: "spring", stiffness: 150, delay: 0.5 }}
-      className={`fixed w-96 top-6 right-6 rounded-lg py-5 px-6 mb-3 text-base inline-flex items-center ${
-        props.type === "success" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"
+      className={`fixed top-6 right-6 mb-3 inline-flex w-96 items-center rounded-lg py-5 px-6 text-base ${
+        props.type === "success"
+          ? "bg-green-100 text-green-700"
+          : "bg-red-100 text-red-700"
       }`}
       role="alert"
     >
@@ -20,7 +22,7 @@ const Alert: FC<AlertProps> = (props) => {
         focusable="false"
         data-prefix="fas"
         data-icon="check-circle"
-        className="w-4 h-4 mr-2 fill-current"
+        className="mr-2 h-4 w-4 fill-current"
         role="img"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512"

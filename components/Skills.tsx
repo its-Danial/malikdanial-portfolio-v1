@@ -89,51 +89,84 @@ const Skills: FC<SkillsProps> = (props) => {
     if (currentTheme === "dark") {
       return (
         <div
-          className={`z-[-100] bg-center bg-cover absolute aspect-[960/550] bg-[url(../public/assets/svg/layered-waves-dark.svg)] bg-no-repeat  w-full h-full`}
+          className={`absolute z-[-100] aspect-[960/550] h-full w-full bg-[url(../public/assets/svg/layered-waves-dark.svg)] bg-cover  bg-center bg-no-repeat`}
         ></div>
       );
     } else {
       return (
         <div
-          className={`z-[-100] bg-center bg-cover absolute aspect-[960/550] bg-[url(../public/assets/svg/layered-waves-light.svg)] bg-no-repeat  w-full h-full`}
+          className={`absolute z-[-100] aspect-[960/550] h-full w-full bg-[url(../public/assets/svg/layered-waves-light.svg)] bg-cover  bg-center bg-no-repeat`}
         ></div>
       );
     }
   };
 
   return (
-    <div id="skills" className="relative w-full h-fit xl:h-screen z-40">
+    <div id="skills" className="relative z-40 h-fit w-full xl:h-screen">
       {renderBackground()}
-      <div className="p-6 md:px-24 md:py-14 space-y-10">
-        <h2 className="font-mono text-center mx-auto text-2xl text-blue-800 dark:text-brightBlue">
-          03. <span className="text-gray-700 dark:text-slate-200">Skills & Technologies</span>
+      <div className="space-y-10 p-6 md:px-24 md:py-14">
+        <h2 className="mx-auto text-center font-mono text-2xl text-blue-800 dark:text-brightBlue">
+          03.{" "}
+          <span className="text-gray-700 dark:text-slate-200">
+            Skills & Technologies
+          </span>
         </h2>
-        <div className="z-50 w-full h-[90%] my-auto flex flex-col xl:flex-row space-y-3 xl:space-y-0 xl:space-x-9">
+        <div className="z-50 my-auto flex h-[90%] w-full flex-col space-y-3 xl:flex-row xl:space-y-0 xl:space-x-9">
           {/* Note: Front-end */}
-          <div className="flex-1 bg-eggshell dark:bg-slate-800 shadow-3xl rounded-lg p-6">
+          <div className="flex-1 rounded-lg bg-eggshell p-6 shadow-3xl dark:bg-slate-800">
             <div className="h-full w-full">
-              <h4 className="text-gray-600 dark:text-sky-300 text-xl text-center">Front-end Development</h4>
-              <div className="px-4 mt-6">
-                <h5 className="text-blue-800 dark:text-brightBlue font-latoSans text-base">Languages</h5>
+              <h4 className="text-center text-xl text-gray-600 dark:text-sky-300">
+                Front-end Development
+              </h4>
+              <div className="mt-6 px-4">
+                <h5 className="font-latoSans text-base text-blue-800 dark:text-brightBlue">
+                  Languages
+                </h5>
                 <div className="my-6 grid grid-cols-3 gap-y-8 gap-x-6">
                   {frontEndLanguages.map((skill) => (
-                    <div key={skill.name} className="hover:scale-105 flex flex-row space-x-2 items-center">
-                      <Image src={skill.logo} width={40} height={40} alt={skill.name} />
+                    <div
+                      key={skill.name}
+                      className="flex flex-row items-center space-x-2 hover:scale-105"
+                    >
+                      <Image
+                        src={skill.logo}
+                        width={40}
+                        height={40}
+                        alt={skill.name}
+                      />
                       <div className="flex flex-col">
-                        <h5 className="text-xl text-gray-700 dark:text-slate-100">{skill.name}</h5>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">{skill.level}</p>
+                        <h5 className="text-xl text-gray-700 dark:text-slate-100">
+                          {skill.name}
+                        </h5>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">
+                          {skill.level}
+                        </p>
                       </div>
                     </div>
                   ))}
                 </div>
-                <h5 className="text-blue-800 dark:text-brightBlue font-latoSans text-base">Technologies</h5>
+                <h5 className="font-latoSans text-base text-blue-800 dark:text-brightBlue">
+                  Technologies
+                </h5>
                 <div className="mt-6 grid grid-cols-3 gap-y-8 gap-x-6">
                   {frontEndTechnologies.map((skill) => (
-                    <div key={skill.name} className="hover:scale-105 flex flex-row space-x-2  items-center">
-                      <Image src={skill.logo} width={40} height={40} alt={skill.name} />
+                    <div
+                      key={skill.name}
+                      className="flex flex-row items-center space-x-2  hover:scale-105"
+                    >
+                      <Image
+                        src={skill.logo}
+                        width={40}
+                        height={40}
+                        alt={skill.name}
+                      />
                       <div className="flex flex-col ">
-                        <h5 className="text-xl text-gray-700 dark:text-slate-100">{skill.name}</h5>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">{skill.level}</p>
+                        <h5 className="text-xl text-gray-700 dark:text-slate-100">
+                          {skill.name}
+                        </h5>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">
+                          {skill.level}
+                        </p>
                       </div>
                     </div>
                   ))}
@@ -143,30 +176,60 @@ const Skills: FC<SkillsProps> = (props) => {
           </div>
 
           {/* Note: Backend */}
-          <div className="flex-1 bg-eggshell dark:bg-slate-800 shadow-3xl rounded-lg p-6">
+          <div className="flex-1 rounded-lg bg-eggshell p-6 shadow-3xl dark:bg-slate-800">
             <div className="h-full w-full">
-              <h4 className="text-gray-600 dark:text-sky-300 text-xl text-center">Back-end Development</h4>
-              <div className="px-4 mt-6">
-                <h5 className="text-blue-800 dark:text-brightBlue font-latoSans text-base">Languages</h5>
+              <h4 className="text-center text-xl text-gray-600 dark:text-sky-300">
+                Back-end Development
+              </h4>
+              <div className="mt-6 px-4">
+                <h5 className="font-latoSans text-base text-blue-800 dark:text-brightBlue">
+                  Languages
+                </h5>
                 <div className="my-7 grid grid-cols-3 gap-y-8 gap-x-6">
                   {backEndLanguages.map((skill) => (
-                    <div key={skill.name} className="hover:scale-105 flex flex-row space-x-2 items-center">
-                      <Image src={skill.logo} width={40} height={40} alt={skill.name} />
+                    <div
+                      key={skill.name}
+                      className="flex flex-row items-center space-x-2 hover:scale-105"
+                    >
+                      <Image
+                        src={skill.logo}
+                        width={40}
+                        height={40}
+                        alt={skill.name}
+                      />
                       <div className="flex flex-col">
-                        <h5 className="text-xl text-gray-700 dark:text-slate-100">{skill.name}</h5>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">{skill.level}</p>
+                        <h5 className="text-xl text-gray-700 dark:text-slate-100">
+                          {skill.name}
+                        </h5>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">
+                          {skill.level}
+                        </p>
                       </div>
                     </div>
                   ))}
                 </div>
-                <h5 className="mt-24 dark:text-brightBlue font-latoSans text-base">Technologies</h5>
+                <h5 className="mt-24 font-latoSans text-base dark:text-brightBlue">
+                  Technologies
+                </h5>
                 <div className="mt-6 grid grid-cols-3 gap-y-8 gap-x-6">
                   {backEndTechnologies.map((skill) => (
-                    <div key={skill.name} className="hover:scale-105 flex flex-row space-x-2  items-center">
-                      <Image src={skill.logo} width={40} height={40} alt={skill.name} />
+                    <div
+                      key={skill.name}
+                      className="flex flex-row items-center space-x-2  hover:scale-105"
+                    >
+                      <Image
+                        src={skill.logo}
+                        width={40}
+                        height={40}
+                        alt={skill.name}
+                      />
                       <div className="flex flex-col">
-                        <h5 className="text-xl dark:text-slate-100">{skill.name}</h5>
-                        <p className="text-xs dark:text-gray-400">{skill.level}</p>
+                        <h5 className="text-xl dark:text-slate-100">
+                          {skill.name}
+                        </h5>
+                        <p className="text-xs dark:text-gray-400">
+                          {skill.level}
+                        </p>
                       </div>
                     </div>
                   ))}

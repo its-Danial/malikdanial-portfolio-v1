@@ -25,7 +25,7 @@ const Projects: FC<ProjectsProps> = (props) => {
     if (currentTheme === "dark") {
       return (
         <Wave
-          className="h-[85vh] m-0 rotate-180 z-[-100]"
+          className="z-[-100] m-0 h-[85vh] rotate-180"
           // #F8F0E3
           // @ts-ignore
           fill="#1e293b"
@@ -40,7 +40,7 @@ const Projects: FC<ProjectsProps> = (props) => {
     } else {
       return (
         <Wave
-          className="h-[85vh] m-0 -mt-1 rotate-180 z-[-100]"
+          className="z-[-100] m-0 -mt-1 h-[85vh] rotate-180"
           // #F8F0E3
           // @ts-ignore
           fill="#1e40af"
@@ -64,21 +64,26 @@ const Projects: FC<ProjectsProps> = (props) => {
 
   return (
     <>
-      <h2 className="font-mono text-center mx-auto text-2xl text-brightBlue bg-blue-800 dark:bg-slate-800 pb-10">
+      <h2 className="mx-auto bg-blue-800 pb-10 text-center font-mono text-2xl text-brightBlue dark:bg-slate-800">
         04. <span className=" text-slate-200">Some Things I’ve Built</span>
       </h2>
       <div
         id="projects"
-        className="scroll-mt-20 w-full min-h-screen h-full relative z-40 overflow-y-auto sm:overflow-visible"
+        className="relative z-40 h-full min-h-screen w-full scroll-mt-20 overflow-y-auto sm:overflow-visible"
       >
         {renderWave()}
-        <div className="absolute w-[90%] h-full top-[50%] left-[50%] " style={{ transform: "translate(-50%, -50%)" }}>
-          <div className="grid sm:grid-cols-3 gap-4 gap-y-4 md:px-5 ">{projectView}</div>
+        <div
+          className="absolute top-[50%] left-[50%] h-full w-[90%] "
+          style={{ transform: "translate(-50%, -50%)" }}
+        >
+          <div className="grid gap-4 gap-y-4 sm:grid-cols-3 md:px-5 ">
+            {projectView}
+          </div>
         </div>
       </div>
       <div className="flex justify-center">
         <Link href="/archive">
-          <button className="mt-4 sm:mt-0 px-4 py-2 rounded-md border-2 dark:border-brightBlue dark:text-brightBlue border-lightBlue font-mono text-lightBlue text-xs hover:bg-blue-600/5 dark:hover:bg-brightBlue/20 hover:scale-105 ease-in duration-200">
+          <button className="mt-4 rounded-md border-2 border-lightBlue px-4 py-2 font-mono text-xs text-lightBlue duration-200 ease-in hover:scale-105 hover:bg-blue-600/5 dark:border-brightBlue dark:text-brightBlue dark:hover:bg-brightBlue/20 sm:mt-0">
             View Archive
           </button>
         </Link>

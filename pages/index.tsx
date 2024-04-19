@@ -11,7 +11,7 @@ import Skills from "../components/Skills";
 
 const Home: NextPage = () => {
   return (
-    <div className="relative  flex flex-col min-h-screen">
+    <div className="relative  flex min-h-screen flex-col">
       <Head>
         <title>Danial | Software engineer</title>
         <meta name="description" content="Portfolio website for Malik Danial" />

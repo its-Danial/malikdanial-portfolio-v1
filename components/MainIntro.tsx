@@ -26,7 +26,7 @@ const MainIntro: FC<MainIntroProps> = (props) => {
     if (currentTheme === "dark") {
       return (
         <Wave
-          className="h-[85vh] m-0 rotate-180 z-10"
+          className="z-10 m-0 h-[85vh] rotate-180"
           // #F8F0E3
           // @ts-ignore
           fill="#1e293b"
@@ -41,7 +41,7 @@ const MainIntro: FC<MainIntroProps> = (props) => {
     } else {
       return (
         <Wave
-          className="h-[85vh] m-0 rotate-180 z-10"
+          className="z-10 m-0 h-[85vh] rotate-180"
           // #F8F0E3
           // @ts-ignore
           fill="#1e40af"
@@ -57,13 +57,20 @@ const MainIntro: FC<MainIntroProps> = (props) => {
   };
 
   // Note: text animation
-  const TEXTS = ["software engineer 💻", "traveler 🌎", "cat owner 🐈", "polyglot 🗣", "software engineer 💻"];
+  const TEXTS = [
+    "software engineer 💻",
+    "traveler 🌎",
+    "cat owner 🐈",
+    "polyglot 🗣",
+    "software engineer 💻",
+  ];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const intervalId = setInterval(
-      () => setIndex((index) => (index + 1 != TEXTS.length ? index + 1 : index)),
-      1500 // every 3 seconds
+      () =>
+        setIndex((index) => (index + 1 != TEXTS.length ? index + 1 : index)),
+      1500, // every 3 seconds
     );
     return () => clearTimeout(intervalId);
   }, []);
@@ -74,17 +81,17 @@ const MainIntro: FC<MainIntroProps> = (props) => {
 
       {/* main first view container */}
       <main
-        className="absolute w-full h-full sm:h-auto top-[60%] sm:top-[48%] left-[50%] overflow-hidden p-6 lg:px-24 md:py-10"
+        className="absolute top-[60%] left-[50%] h-full w-full overflow-hidden p-6 sm:top-[48%] sm:h-auto md:py-10 lg:px-24"
         style={{ transform: "translate(-50%, -50%)" }}
       >
-        <div className="w-full mx-auto relative flex flex-col md:flex-row sm:justify-between sm:items-center overflow-hidden">
-          <div className="md:ml-12 sm:w-[1/2]  w-full flex">
-            <div className="w-full flex flex-col space-y-0 lg:space-y-4 justify-center">
+        <div className="relative mx-auto flex w-full flex-col overflow-hidden sm:items-center sm:justify-between md:flex-row">
+          <div className="flex w-full  sm:w-[1/2] md:ml-12">
+            <div className="flex w-full flex-col justify-center space-y-0 lg:space-y-4">
               <motion.h1
                 initial={{ opacity: 0, x: -200 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ type: "spring", stiffness: 260, delay: 0.5 }}
-                className="font-mono text-sm md:text-base text-brightBlue"
+                className="font-mono text-sm text-brightBlue md:text-base"
               >
                 Hi, my name is
               </motion.h1>
@@ -92,7 +99,7 @@ const MainIntro: FC<MainIntroProps> = (props) => {
                 initial={{ opacity: 0, x: -200 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ type: "spring", stiffness: 260, delay: 1.2 }}
-                className="font-latoSans font-extrabold tracking-tight text-4xl md:text-5xl lg:text-6xl text-slate-300"
+                className="font-latoSans text-4xl font-extrabold tracking-tight text-slate-300 md:text-5xl lg:text-6xl"
               >
                 Malik Danial.
               </motion.h2>
@@ -100,11 +107,21 @@ const MainIntro: FC<MainIntroProps> = (props) => {
               <motion.h3
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ type: "spring", stiffness: 150, delay: 2, delayChildren: 0.1, staggerChildren: 0.1 }}
-                className="font-latoSans font-extrabold tracking-tight text-4xl md:text-5xl lg:text-6xl text-gray-400"
+                transition={{
+                  type: "spring",
+                  stiffness: 150,
+                  delay: 2,
+                  delayChildren: 0.1,
+                  staggerChildren: 0.1,
+                }}
+                className="font-latoSans text-4xl font-extrabold tracking-tight text-gray-400 md:text-5xl lg:text-6xl"
               >
                 A{" "}
-                <TextTransition inline springConfig={presets.wobbly} style={{ maxWidth: "75%" }}>
+                <TextTransition
+                  inline
+                  springConfig={presets.wobbly}
+                  style={{ maxWidth: "75%" }}
+                >
                   {TEXTS[index % TEXTS.length]}
                 </TextTransition>
                 <span className="ml-1">.</span>
@@ -116,14 +133,18 @@ const MainIntro: FC<MainIntroProps> = (props) => {
                 transition={{ delay: 3, duration: 0.8 }}
                 className="w-[95%] sm:max-w-xl"
               >
-                <p className="font-latoSans tracking-tight text-sm md:text-lg text-gray-400">
-                  Currently employed at Bayt.com, specializing in front‐end development. Actively leading project
-                  migrations to the latest technologies, designing and maintaining an custom web components widget for
-                  seamless third party integration, and prioritizing application performance optimization. I work on
-                  personal projects using <strong className="text-gray-300">React.js/Next.js</strong> with{" "}
-                  <strong className="text-gray-300">Typescript</strong> and{" "}
-                  <strong className="text-gray-300">Java Spring</strong> in my spare time. Recently I&apos;ve been
-                  playing around with IOS development, machine learning and AI.
+                <p className="font-latoSans text-sm tracking-tight text-gray-400 md:text-lg">
+                  Currently employed at Bayt.com, specializing in front‐end
+                  development. Actively leading project migrations to the latest
+                  technologies, designing and maintaining an custom web
+                  components widget for seamless third party integration, and
+                  prioritizing application performance optimization. I work on
+                  personal projects using{" "}
+                  <strong className="text-gray-300">React.js/Next.js</strong>{" "}
+                  with <strong className="text-gray-300">Typescript</strong> and{" "}
+                  <strong className="text-gray-300">Java Spring</strong> in my
+                  spare time. Recently I&apos;ve been playing around with IOS
+                  development, machine learning and AI.
                 </p>
               </motion.div>
             </div>
@@ -133,7 +154,7 @@ const MainIntro: FC<MainIntroProps> = (props) => {
             initial={{ opacity: 0, x: 200 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ type: "spring", stiffness: 150, delay: 0.5 }}
-            className="basis-[30%] md:basis-[40%] mx-auto md:flex h-[300px] w-[300px] md:h-auto md:w-auto"
+            className="mx-auto h-[300px] w-[300px] basis-[30%] md:flex md:h-auto md:w-auto md:basis-[40%]"
           >
             <Image src={memoji} width={400} height={400} alt="memoji" />
           </motion.div>
