@@ -166,7 +166,7 @@ const MainIntro: FC<MainIntroProps> = (props) => {
                       Mittlerorganisation z.B. DAAD oder AvH
                     </option>
                     <option value="Phd students holding an admission letter from a german university / Promotionsstudenten mit Zulassung einer deutschen Universität">
-                      Phd students holding an admission letter from a german
+                      Masters students holding an admission letter from a german
                       university / Promotionsstudenten mit Zulassung einer
                       deutschen Universität
                     </option>
