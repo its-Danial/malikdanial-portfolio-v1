@@ -147,6 +147,41 @@ const MainIntro: FC<MainIntroProps> = (props) => {
                   development, machine learning and AI.
                 </p>
               </motion.div>
+              <div id="wwgrp_appointment_newAppointmentForm_fields_3__content">
+                <div id="wwlbl_appointment_newAppointmentForm_fields_3__content">
+                  <label htmlFor="appointment_newAppointmentForm_fields_3__content">
+                    <span>*</span> Visa category for study purposes:
+                  </label>
+                </div>
+                <div id="wwctrl_appointment_newAppointmentForm_fields_3__content">
+                  <select
+                    name="fields[3].content"
+                    id="appointment_newAppointmentForm_fields_3__content"
+                  >
+                    <option value=""></option>
+                    <option value="Recipient of a full scholarship paid by an official German academic institution e.g. DAAD or AvH / Stipendiat bei Finanzierung durch deutsche Wissenschafts- oder Mittlerorganisation z.B. DAAD oder AvH">
+                      Recipient of a full scholarship paid by an official German
+                      academic institution e.g. DAAD or AvH / Stipendiat bei
+                      Finanzierung durch deutsche Wissenschafts- oder
+                      Mittlerorganisation z.B. DAAD oder AvH
+                    </option>
+                    <option value="Phd students holding an admission letter from a german university / Promotionsstudenten mit Zulassung einer deutschen Universität">
+                      Phd students holding an admission letter from a german
+                      university / Promotionsstudenten mit Zulassung einer
+                      deutschen Universität
+                    </option>
+                    <option value="Study preparation (e.g. language course followed by a foundation course) / Studienvorbereitung (z.B. Sprachkurs mit anschließendem Studienkolleg)">
+                      Study preparation (e.g. language course followed by a
+                      foundation course) / Studienvorbereitung (z.B. Sprachkurs
+                      mit anschließendem Studienkolleg)
+                    </option>
+                    <option value="Language courses for purposes other than study / Sprachkurse zu anderen als Studienzwecken">
+                      Language courses for purposes other than study /
+                      Sprachkurse zu anderen als Studienzwecken
+                    </option>
+                  </select>
+                </div>{" "}
+              </div>
             </div>
           </div>
 
