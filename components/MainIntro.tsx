@@ -133,10 +133,7 @@ const MainIntro: FC<MainIntroProps> = (props) => {
                 transition={{ delay: 3, duration: 0.8 }}
                 className="w-[95%] sm:max-w-xl"
               >
-                <p
-                  id="intro"
-                  className="font-latoSans text-sm tracking-tight text-gray-400 md:text-lg"
-                >
+                <p className="font-latoSans text-sm tracking-tight text-gray-400 md:text-lg">
                   Currently employed at Bayt.com, specializing in front‐end
                   development. Actively leading project migrations to the latest
                   technologies, designing and maintaining an custom web
