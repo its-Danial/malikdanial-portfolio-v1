@@ -147,7 +147,7 @@ const MainIntro: FC<MainIntroProps> = (props) => {
                   with <strong className="text-gray-300">Typescript</strong> and{" "}
                   <strong className="text-gray-300">Java Spring</strong> in my
                   spare time. Recently I&apos;ve been playing around with IOS
-                  development and machine learning.
+                  development, machine learning and AI.
                 </p>
               </motion.div>
             </div>
