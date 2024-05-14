@@ -165,8 +165,13 @@ const MainIntro: FC<MainIntroProps> = (props) => {
                       Finanzierung durch deutsche Wissenschafts- oder
                       Mittlerorganisation z.B. DAAD oder AvH
                     </option>
+                    <option value="masters students holding an admission letter from a german university / Promotionsstudenten mit Zulassung einer deutschen Universität">
+                      masters students holding an admission letter from a german
+                      university / Promotionsstudenten mit Zulassung einer
+                      deutschen Universität
+                    </option>
                     <option value="Phd students holding an admission letter from a german university / Promotionsstudenten mit Zulassung einer deutschen Universität">
-                      Masters students holding an admission letter from a german
+                      Phd students holding an admission letter from a german
                       university / Promotionsstudenten mit Zulassung einer
                       deutschen Universität
                     </option>
