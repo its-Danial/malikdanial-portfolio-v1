@@ -237,7 +237,7 @@ const NavBar: FC<NavBarProps> = (props) => {
                           </span>
                         </li>
                       </Link> */}
-                      <Link href="/">
+                      <Link href="/#skills">
                         <li className=" flex flex-col font-mono text-sm text-nextBlue">
                           02.{" "}
                           <span className="cursor-pointer text-lg text-gray-600 hover:text-nextBlue">
@@ -245,7 +245,7 @@ const NavBar: FC<NavBarProps> = (props) => {
                           </span>
                         </li>
                       </Link>
-                      <Link href="/">
+                      <Link href="/#contact">
                         <li className="flex flex-col font-mono text-sm text-nextBlue">
                           03.{" "}
                           <span className="cursor-pointer text-lg text-gray-600 hover:text-nextBlue">
