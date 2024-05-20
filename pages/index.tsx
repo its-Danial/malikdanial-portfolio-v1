@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       {/* Note: content */}
       <div className="flex-grow">
         <MainIntro />
-        <About />
+        {/* <About /> */}
         <Skills />
         <Projects />
         <Contact />

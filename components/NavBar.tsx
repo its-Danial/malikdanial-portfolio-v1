@@ -131,17 +131,17 @@ const NavBar: FC<NavBarProps> = (props) => {
                     </span>
                   </li>
                 </Link>
-                <Link href="/#about">
+                {/* <Link href="/#about">
                   <li className="font-mono  text-sm font-medium text-brightBlue">
                     02.{" "}
                     <span className="cursor-pointer text-eggshell hover:text-blue-300">
                       About
                     </span>
                   </li>
-                </Link>
+                </Link> */}
                 <Link href="/#skills">
                   <li className="font-mono text-sm font-medium text-brightBlue">
-                    03.{" "}
+                    02.{" "}
                     <span className="cursor-pointer text-eggshell hover:text-blue-300">
                       Skill
                     </span>
@@ -149,7 +149,7 @@ const NavBar: FC<NavBarProps> = (props) => {
                 </Link>
                 <Link href="/#projects">
                   <li className="font-mono text-sm font-medium text-brightBlue">
-                    04.{" "}
+                    03.{" "}
                     <span className="cursor-pointer text-eggshell hover:text-blue-300">
                       Project
                     </span>
@@ -157,7 +157,7 @@ const NavBar: FC<NavBarProps> = (props) => {
                 </Link>
                 <Link href="/#contact">
                   <li className="font-mono text-sm font-medium text-brightBlue">
-                    05.{" "}
+                    04.{" "}
                     <span className="cursor-pointer text-eggshell hover:text-blue-300">
                       Contact
                     </span>
@@ -229,17 +229,17 @@ const NavBar: FC<NavBarProps> = (props) => {
                           </span>
                         </li>
                       </Link>
-                      <Link href="/">
+                      {/* <Link href="/">
                         <li className=" flex flex-col font-mono text-sm text-nextBlue">
                           02.{" "}
                           <span className="cursor-pointer text-lg text-gray-600 hover:text-nextBlue">
                             About
                           </span>
                         </li>
-                      </Link>
+                      </Link> */}
                       <Link href="/">
                         <li className=" flex flex-col font-mono text-sm text-nextBlue">
-                          03.{" "}
+                          02.{" "}
                           <span className="cursor-pointer text-lg text-gray-600 hover:text-nextBlue">
                             Skills
                           </span>
@@ -247,7 +247,7 @@ const NavBar: FC<NavBarProps> = (props) => {
                       </Link>
                       <Link href="/">
                         <li className="flex flex-col font-mono text-sm text-nextBlue">
-                          04.{" "}
+                          03.{" "}
                           <span className="cursor-pointer text-lg text-gray-600 hover:text-nextBlue">
                             Contact
                           </span>
