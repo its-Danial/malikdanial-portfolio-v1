@@ -81,13 +81,13 @@ const Projects: FC<ProjectsProps> = (props) => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center">
+      {/* <div className="flex justify-center">
         <Link href="/archive">
           <button className="mt-4 rounded-md border-2 border-lightBlue px-4 py-2 font-mono text-xs text-lightBlue duration-200 ease-in hover:scale-105 hover:bg-blue-600/5 dark:border-brightBlue dark:text-brightBlue dark:hover:bg-brightBlue/20 sm:mt-0">
             View Archive
           </button>
         </Link>
-      </div>
+      </div> */}
     </>
   );
 };
